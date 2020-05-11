@@ -1,0 +1,2 @@
+D:\TFGGitHub\TFGVRMusic\RideCymbal\RideCymbal\Ride\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+D:\TFGGitHub\TFGVRMusic\RideCymbal\RideCymbal\Ride\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
