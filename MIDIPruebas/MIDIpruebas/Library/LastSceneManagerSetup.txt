@@ -1,0 +1,5 @@
+sceneSetups:
+- path: Assets/MidiPlayer/Scenes For Demo/Demos/TestMidiStream.unity
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0
