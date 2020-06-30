@@ -29,6 +29,11 @@ public class ChangePosition : MonoBehaviour
             SelectPos(2);
         }
 
+        if (Input.GetKeyDown(KeyCode.F3))
+        {
+            SelectPos(3);
+        }
+
 
     }
 
@@ -44,6 +49,10 @@ public class ChangePosition : MonoBehaviour
 
             case 2:
                 personaje.transform.position = new Vector3(18.59f, 4.005f, 0f);
+                break;
+
+            case 3:
+                personaje.transform.position = new Vector3(-22.71f, 4.71f, 1.77f);
                 break;
         }
     }
