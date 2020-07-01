@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Escenario.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Estudio.unity
+    guid: 3e701936fc2762d4ea5f1a35b8ac5107
+  - enabled: 1
+    path: Assets/Scenes/Iglesia.unity
+    guid: dc8457e994662b34394b7506a8792788
   m_configObjects: {}

@@ -1,21 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ChangePosition : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public GameObject personaje;
-
-
-    Vector3 posOriginal;
-
- 
-    void Start()
-    {
-        posOriginal = personaje.transform.position;
-    }
+    public Scene escenario;
+    public Scene estudio;
+    public Scene iglesia;
 
     // Update is called once per frame
     void Update()
@@ -44,15 +38,15 @@ public class ChangePosition : MonoBehaviour
 
         {
             case 1:
-                personaje.transform.position = posOriginal;
+                SceneManager.LoadScene("escenario");
                 break;
 
             case 2:
-                personaje.transform.position = new Vector3(18.59f, 4.005f, 0f);
+                SceneManager.LoadScene("estudio");
                 break;
 
             case 3:
-                personaje.transform.position = new Vector3(-22.71f, 4.71f, 1.77f);
+                SceneManager.LoadScene("iglesia");
                 break;
         }
     }
