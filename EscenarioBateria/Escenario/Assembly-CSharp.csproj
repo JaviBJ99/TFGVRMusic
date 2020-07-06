@@ -73,7 +73,9 @@
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
     <Compile Include="Assets\Scripts\AudioController.cs" />
     <Compile Include="Assets\Scripts\ChangePosition.cs" />
-    <Compile Include="Assets\Scripts\Cymbal.cs" />
+    <Compile Include="Assets\Scripts\CymbalScripts\CheckSoundBell.cs" />
+    <Compile Include="Assets\Scripts\CymbalScripts\CheckSoundBody.cs" />
+    <Compile Include="Assets\Scripts\CymbalScripts\Cymbal.cs" />
     <Compile Include="Assets\Scripts\DetectSound.cs" />
     <Compile Include="Assets\Scripts\HoopSound.cs" />
     <Compile Include="Assets\Scripts\PruebaCollider.cs" />
