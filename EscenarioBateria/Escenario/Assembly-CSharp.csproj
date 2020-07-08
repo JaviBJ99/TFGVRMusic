@@ -71,15 +71,13 @@
     <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
-    <Compile Include="Assets\Scripts\AudioController.cs" />
     <Compile Include="Assets\Scripts\ChangePosition.cs" />
     <Compile Include="Assets\Scripts\CymbalScripts\CheckSoundBell.cs" />
     <Compile Include="Assets\Scripts\CymbalScripts\CheckSoundBody.cs" />
     <Compile Include="Assets\Scripts\CymbalScripts\Cymbal.cs" />
-    <Compile Include="Assets\Scripts\DetectSound.cs" />
-    <Compile Include="Assets\Scripts\HoopSound.cs" />
-    <Compile Include="Assets\Scripts\PruebaCollider.cs" />
     <Compile Include="Assets\Scripts\SelectStage.cs" />
+    <Compile Include="Assets\Scripts\SnareScripts\AudioController.cs" />
+    <Compile Include="Assets\Scripts\SnareScripts\DetectSound.cs" />
     <Compile Include="Assets\Scripts\SoundController.cs" />
     <Compile Include="Assets\Scripts\StickMove.cs" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
