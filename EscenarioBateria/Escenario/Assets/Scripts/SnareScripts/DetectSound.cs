@@ -17,7 +17,7 @@ public class DetectSound : MonoBehaviour
         {
 
             Debug.Log(contact.point.x);
-            if (contact.point.x < -2.7 || contact.point.x > -1.6)
+            if (contact.point.x < -2.9 || contact.point.x > -2.6)
             {
                 //soundcont.HoopDetectSound();
                 TimeHitHoop = Time.deltaTime;
@@ -25,7 +25,7 @@ public class DetectSound : MonoBehaviour
 
             }
 
-            if (contact.point.x > -2.7 && contact.point.x < -1.6)
+            if (contact.point.x > -2.9 && contact.point.x < -2.6)
             {
                 //soundcont.SnareDetectSound();
                 TimeHitSnare = Time.deltaTime;

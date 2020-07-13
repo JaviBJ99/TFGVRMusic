@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CheckSoundBody : MonoBehaviour
+public class RideBodySound : MonoBehaviour
 {
-    public Cymbal cymbalClass;
+    public TypeOfSoundController typeOfSound;
     Collider body;
     
     void Start()
@@ -19,11 +19,11 @@ public class CheckSoundBody : MonoBehaviour
         {
             if (body.bounds.Contains(contact.point))
             {
-                cymbalClass.NormalRideSound();
+                typeOfSound.NormalRideSound();
             }
             else
             {
-                cymbalClass.NormalRideSound();
+                typeOfSound.NormalRideSound();
             }
 
         }

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CheckSoundBell : MonoBehaviour
+public class RideBellSound : MonoBehaviour
 {
 
-    public Cymbal cymbalClass;
+    public TypeOfSoundController typeOfSound;
     Collider bell;
   
     void Start()
@@ -20,10 +20,10 @@ public class CheckSoundBell : MonoBehaviour
         {
             if (bell.bounds.Contains(contact.point))
             {
-                cymbalClass.BellSound();
+                typeOfSound.BellSound();
             } else
             {
-                cymbalClass.NormalRideSound();
+                typeOfSound.NormalRideSound();
             }
 
         }

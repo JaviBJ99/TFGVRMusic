@@ -24,7 +24,24 @@ public class StickMove : MonoBehaviour
             transform.Rotate(0, 0, 50 * Time.deltaTime);
         }
         else if (Input.GetKey(KeyCode.D))
+        {
             transform.Rotate(0, 0, -50 * Time.deltaTime);
+        }
+
+        else if (Input.GetKey(KeyCode.W))
+        {
+            transform.Translate(Vector3.forward * Time.deltaTime);
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            transform.Translate(Vector3.back * Time.deltaTime);
+        }
+        else if (Input.GetKey(KeyCode.E))
+        {
+            transform.Rotate(0, -50 * Time.deltaTime, 0);
+        }
+
+
 
         rb.angularDrag = 10;
     }

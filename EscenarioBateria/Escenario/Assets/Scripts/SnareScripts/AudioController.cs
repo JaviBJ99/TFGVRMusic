@@ -11,6 +11,11 @@ public class AudioController : MonoBehaviour
 
     public AudioClip ride;
 
+    public AudioClip crash;
+
+    public AudioClip goliath;
+
+    public AudioClip tom;
 
 
     void Start()
