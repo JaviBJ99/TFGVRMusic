@@ -72,11 +72,13 @@
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
     <Compile Include="Assets\Scripts\ChangePosition.cs" />
+    <Compile Include="Assets\Scripts\CymbalScripts\BottomHiHatSound.cs" />
     <Compile Include="Assets\Scripts\CymbalScripts\CrashSound.cs" />
     <Compile Include="Assets\Scripts\CymbalScripts\GoliathSound.cs" />
     <Compile Include="Assets\Scripts\CymbalScripts\RideBellSound.cs" />
     <Compile Include="Assets\Scripts\CymbalScripts\RideBodySound.cs" />
     <Compile Include="Assets\Scripts\CymbalScripts\TomSound.cs" />
+    <Compile Include="Assets\Scripts\CymbalScripts\TopHihatSound.cs" />
     <Compile Include="Assets\Scripts\CymbalScripts\TypeOfSoundController.cs" />
     <Compile Include="Assets\Scripts\SelectStage.cs" />
     <Compile Include="Assets\Scripts\SnareScripts\AudioController.cs" />

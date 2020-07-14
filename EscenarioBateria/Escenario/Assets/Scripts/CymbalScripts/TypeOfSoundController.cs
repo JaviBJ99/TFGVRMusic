@@ -33,4 +33,13 @@ public class TypeOfSoundController : MonoBehaviour
         soundcont.audioSource.PlayOneShot(soundcont.tom);
     }
 
+    public void HiHatSound(bool open)
+    {
+        if (open)
+            soundcont.audioSource.PlayOneShot(soundcont.openHiHat);
+        else
+            soundcont.audioSource.PlayOneShot(soundcont.closeHiHat);
+
+    }
+
 }

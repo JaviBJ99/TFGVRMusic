@@ -17,6 +17,11 @@ public class AudioController : MonoBehaviour
 
     public AudioClip tom;
 
+    public AudioClip openHiHat;
+
+    public AudioClip closeHiHat;
+
+
 
     void Start()
     {
