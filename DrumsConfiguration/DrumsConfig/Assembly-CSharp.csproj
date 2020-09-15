@@ -67,6 +67,8 @@
     <Compile Include="Assets\Scripts\BackToMenu.cs" />
     <Compile Include="Assets\Scripts\CustomDrums.cs" />
     <Compile Include="Assets\Scripts\DrumChoice.cs" />
+    <Compile Include="Assets\Scripts\Positions.cs" />
+    <Compile Include="Assets\Scripts\SetCustomDrums.cs" />
     <Reference Include="UnityEngine">
       <HintPath>D:/UnityEditors/2019.3.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

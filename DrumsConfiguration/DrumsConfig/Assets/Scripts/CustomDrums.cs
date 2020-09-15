@@ -5,18 +5,15 @@ using UnityEngine.UI;
 
 public class CustomDrums : MonoBehaviour
 {
-
     public int toms;
-
-    public int crashes;
 
     public int ftoms;
 
-
+    public int crashes;
 
     public void changeToms(float n)
     {
-        toms = (int)n;
+        Positions.nToms= (int)n;
     }
 
     public void changeFToms(float f)

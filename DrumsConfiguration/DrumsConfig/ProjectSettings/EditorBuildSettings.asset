@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ProDrums.unity
     guid: d0bf86d3ee65d6c488f7757db35776d7
+  - enabled: 1
+    path: Assets/Scenes/CustomDrums.unity
+    guid: 8016166c8478ff34ca3a540e6475a695
   m_configObjects: {}
