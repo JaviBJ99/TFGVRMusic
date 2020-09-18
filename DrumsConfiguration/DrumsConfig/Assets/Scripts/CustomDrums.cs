@@ -18,13 +18,12 @@ public class CustomDrums : MonoBehaviour
 
     public void changeFToms(float f)
     {
-        ftoms = (int)f;
-
+        Positions.nFToms = (int)f;
     }
 
-    public void changeCrasesh(float c)
+    public void changeCrashes(float c)
     {
-        crashes = (int)c;
+        Positions.nCrashes = (int)c;
     }
 
     

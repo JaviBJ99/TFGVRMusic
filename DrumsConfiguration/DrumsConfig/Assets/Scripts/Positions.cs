@@ -28,8 +28,8 @@ public static class Positions
     public static Vector3 kickDrumPos = new Vector3(-1.46f, 2.06f, 7.15f);
     public static Vector3 kickDrumRot = new Vector3(-90.0f, 2.14f, -67.147f);
 
-    public static Vector3 floorTom1Pos = new Vector3(-1.199f, 2.191f, 6.66f);
-    public static Vector3 floorTom2Pos = new Vector3(-1.199f, 2.191f, 6.167f);
+    public static Vector3 ftom1Pos = new Vector3(-1.199f, 2.191f, 6.66f);
+    public static Vector3 ftom2Pos = new Vector3(-1.199f, 2.191f, 6.167f);
 
     public static Vector3 tom1Pos = new Vector3(-2.00f, 2.512f, 7.25f);
     public static Vector3 tom1StandPos = new Vector3(-2.00f, 2.197f, 7.28f);
@@ -48,6 +48,10 @@ public static class Positions
     public static int nFToms;
 
     public static Vector3[] tomsPos = new[] { tom1Pos, tom2Pos, tom3Pos };
-    
+
+    public static Vector3[] ftomsPos = new[] { ftom1Pos, ftom2Pos };
+
+    public static Vector3[] crashesPos = new[] { crash1Pos, crash2Pos, crash3Pos };
+
 
 }
