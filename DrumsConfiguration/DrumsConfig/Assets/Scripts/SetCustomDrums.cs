@@ -15,7 +15,7 @@ public class SetCustomDrums : MonoBehaviour
 
     int numCrashes;
 
-    public GameObject tom1, tom2, tom3, ftom1, ftom2, crash1, crash2, crash3;
+    public GameObject tom1, tom2, tom3, ftom1, ftom2, crash1, crash2, crash3, snare, hihat, kick, ride;
 
     public GameObject[] toms = new GameObject[3];
 
@@ -27,7 +27,7 @@ public class SetCustomDrums : MonoBehaviour
     {
         getNumber();
 
-       
+        setDrums();
         setToms(numToms);
         setFToms(numFtoms);
         setCrashes(numCrashes); 
@@ -69,6 +69,15 @@ public class SetCustomDrums : MonoBehaviour
            
         }
 
+    }
+
+    public void setDrums()
+    {
+        snare.transform.position = Positions.snarePos;
+        kick.transform.position = Positions.kickDrumPos;
+        //kick.transform.Rotate(Positions.kickDrumRot[0], Positions.kickDrumRot[1], Positions.kickDrumRot[2], Space.Self);
+        hihat.transform.position = Positions.hihattopPos;
+        ride.transform.position = Positions.ridePos;
     }
 
     public void setFToms(int f)

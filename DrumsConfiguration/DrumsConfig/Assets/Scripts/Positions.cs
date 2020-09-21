@@ -22,7 +22,7 @@ public static class Positions
     public static Vector3 crash3Pos = new Vector3(-0.953f, 2.8f, 6.26f);
     public static Vector3 crash3StandPos = new Vector3(-0.953f, 2.138f, 6.26f);
 
-    public static Vector3 snarePos = new Vector3(-1.954f, 2.83f, 6.89f);
+    public static Vector3 snarePos = new Vector3(-1.954f, 2.15f, 6.89f);
     public static Vector3 sanreStandPos = new Vector3(-1.94f, 2.067f, 6.9f);
 
     public static Vector3 kickDrumPos = new Vector3(-1.46f, 2.06f, 7.15f);
