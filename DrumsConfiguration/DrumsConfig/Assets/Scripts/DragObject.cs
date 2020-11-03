@@ -24,7 +24,7 @@ public class DragObject : MonoBehaviour
     void OnMouseDrag()
     {
         RBody = GetComponent<Rigidbody>();
-        RBody.constraints = RigidbodyConstraints.None;
+        //RBody.constraints = RigidbodyConstraints.None;
         RBody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
        
 
@@ -45,12 +45,12 @@ public class DragObject : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             
-            transform.Rotate(0.0f, 0.0f, speedRot * Time.deltaTime, Space.Self);
+            transform.Rotate(0.0f, speedRot * Time.deltaTime, 0.0f, Space.Self);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Rotate(0.0f, 0.0f, -speedRot * Time.deltaTime, Space.Self);
+            transform.Rotate(0.0f, -speedRot * Time.deltaTime, 0.0f , Space.Self);
 
         }
 
@@ -60,7 +60,7 @@ public class DragObject : MonoBehaviour
     private void OnMouseExit()
     {
         RBody = GetComponent<Rigidbody>();
-        RBody.constraints = RigidbodyConstraints.FreezeAll;
+        //RBody.constraints = RigidbodyConstraints.FreezeAll;
     }
 
 

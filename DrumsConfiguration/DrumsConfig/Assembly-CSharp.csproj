@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\Config.cs" />
     <Compile Include="Assets\Scripts\BackToMenu.cs" />
+    <Compile Include="Assets\Scripts\CollisionDetect.cs" />
     <Compile Include="Assets\Scripts\CustomDrums.cs" />
     <Compile Include="Assets\Scripts\DragObject.cs" />
     <Compile Include="Assets\Scripts\DrumChoice.cs" />
