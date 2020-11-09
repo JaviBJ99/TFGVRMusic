@@ -11,7 +11,7 @@ public class SelectObjectToCreate : MonoBehaviour
         Quaternion rot = obj.transform.rotation;
         Vector3 pos;
         pos = obj.transform.position;
-        Instantiate(obj, new Vector3(0,0,pos.z - 6), rot);
+        Instantiate(obj, new Vector3(-2.11f,0.0f,0.0f), rot);
         
     }
 }
