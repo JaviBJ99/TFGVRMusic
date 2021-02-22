@@ -21,12 +21,12 @@ public class AudioController : MonoBehaviour
 
     public AudioClip closeHiHat;
 
+    public AudioClip snare;
 
+    public AudioClip hoop;
 
-    void Start()
-    {
-        
-    }
+    public AudioClip rimshot;
+
 
  
 }

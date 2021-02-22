@@ -41,5 +41,17 @@ public class TypeOfSoundController : MonoBehaviour
             soundcont.audioSource.PlayOneShot(soundcont.closeHiHat);
 
     }
+    public void SnareSound()
+    {
+        soundcont.audioSource.PlayOneShot(soundcont.snare);
+    }
+    public void HoopSound()
+    {
+        soundcont.audioSource.PlayOneShot(soundcont.hoop);
+    }
+    public void RimShotSound()
+    {
+        soundcont.audioSource.PlayOneShot(soundcont.rimshot);
+    }
 
 }

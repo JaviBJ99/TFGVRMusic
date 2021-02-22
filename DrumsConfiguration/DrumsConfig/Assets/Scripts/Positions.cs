@@ -31,13 +31,13 @@ public static class Positions
     public static Vector3 ftom1Pos = new Vector3(-1.199f, 2.191f, 6.66f);
     public static Vector3 ftom2Pos = new Vector3(-1.199f, 2.191f, 6.167f);
 
-    public static Vector3 tom1Pos = new Vector3(-2.00f, 2.512f, 7.25f);
+    public static Vector3 tom1Pos = new Vector3(-2.05f, 2.512f, 7.25f);
     public static Vector3 tom1StandPos = new Vector3(-2.00f, 2.197f, 7.28f);
 
     public static Vector3 tom2Pos = new Vector3(-1.72f, 2.512f, 7.25f);
     public static Vector3 tom2StandPos = new Vector3(-1.72f, 2.197f, 7.28f);
 
-    public static Vector3 tom3Pos = new Vector3(-2.342f, 2.512f, 7.25f);
+    public static Vector3 tom3Pos = new Vector3(-2.42f, 2.512f, 7.25f);
     public static Vector3 tom3StandPos = new Vector3(-2.344f, 2.197f, 7.28f);
 
 

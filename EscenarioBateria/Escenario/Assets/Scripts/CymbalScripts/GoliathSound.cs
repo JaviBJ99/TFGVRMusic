@@ -16,18 +16,6 @@ public class GoliathSound : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        foreach (ContactPoint contact in collision.contacts)
-        {
-            if (body.bounds.Contains(contact.point))
-            {
-                typeOfSound.GoliathSound();
-            }
-            else
-            {
-                typeOfSound.GoliathSound();
-            }
-
-
-        }
+        typeOfSound.GoliathSound();
     }
 }

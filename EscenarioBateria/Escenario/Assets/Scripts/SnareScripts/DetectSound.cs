@@ -1,11 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class DetectSound : MonoBehaviour
 {
 
-    public SoundController soundcont;
+    //public SoundController soundcont;
+    public TypeOfSoundController typeOfSound;
 
     float TimeHitHoop;
     float TimeHitSnare;
@@ -16,7 +18,6 @@ public class DetectSound : MonoBehaviour
         foreach (ContactPoint contact in collision.contacts)
         {
 
-            Debug.Log(contact.point.x);
             if (contact.point.x < -2.9 || contact.point.x > -2.6)
             {
                 //soundcont.HoopDetectSound();
@@ -36,24 +37,24 @@ public class DetectSound : MonoBehaviour
 
         if (TimeHitHoop > 0.0f && TimeHitSnare > 0.0f && (TimeHitSnare - TimeHitHoop <= Mathf.Abs(0.07f)))
         {
-            Debug.Log("EHHHHH");
-            soundcont.audioSource.PlayOneShot(soundcont.rimshot);
+
+            typeOfSound.RimShotSound();
             TimeHitHoop = 0.0f;
             TimeHitSnare = 0.0f;
         }
 
         else if (TimeHitSnare > 0 && TimeHitHoop == 0)
         {
-            Debug.Log("ARO");
-            soundcont.audioSource.PlayOneShot(soundcont.snare);
+
+            typeOfSound.SnareSound();
             TimeHitHoop = 0.0f;
             TimeHitSnare = 0.0f;
         }
 
         else if (TimeHitSnare == 0 && TimeHitHoop > 0)
         {
-            Debug.Log("CAJA");
-            soundcont.audioSource.PlayOneShot(soundcont.hoop);
+
+            typeOfSound.HoopSound();
             TimeHitHoop = 0.0f;
             TimeHitSnare = 0.0f;
         }

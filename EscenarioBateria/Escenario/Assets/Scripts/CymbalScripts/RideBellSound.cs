@@ -16,16 +16,6 @@ public class RideBellSound : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        foreach (ContactPoint contact in collision.contacts)
-        {
-            if (bell.bounds.Contains(contact.point))
-            {
-                typeOfSound.BellSound();
-            } else
-            {
-                typeOfSound.NormalRideSound();
-            }
-
-        }
+        typeOfSound.BellSound();
     }
 }
