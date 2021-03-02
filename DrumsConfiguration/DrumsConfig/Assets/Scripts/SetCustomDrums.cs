@@ -36,11 +36,7 @@ public class SetCustomDrums : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 
     public void setToms(int t)
     {
@@ -70,16 +66,6 @@ public class SetCustomDrums : MonoBehaviour
         }
 
     }
-
-    public void setDrums()
-    {
-        snare.transform.position = Positions.snarePos;
-        kick.transform.position = Positions.kickDrumPos;
-        //kick.transform.Rotate(Positions.kickDrumRot[0], Positions.kickDrumRot[1], Positions.kickDrumRot[2], Space.Self);
-        hihat.transform.position = Positions.hihattopPos;
-        ride.transform.position = Positions.ridePos;
-    }
-
     public void setFToms(int f)
     {
         ftoms[0] = ftom1;
@@ -93,6 +79,16 @@ public class SetCustomDrums : MonoBehaviour
 
 
     }
+
+    public void setDrums()
+    {
+        snare.transform.position = Positions.snarePos;
+        kick.transform.position = Positions.kickDrumPos;
+        hihat.transform.position = Positions.hihattopPos;
+        ride.transform.position = Positions.ridePos;
+    }
+
+    
     
     public void getNumber()
     {

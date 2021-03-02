@@ -64,14 +64,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
-    <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
-    <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
-    <Compile Include="Assets\SampleScenes\Scripts\CameraSwitch.cs" />
-    <Compile Include="Assets\SampleScenes\Scripts\LevelReset.cs" />
-    <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
-    <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
-    <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
     <Compile Include="Assets\Scripts\ChangePosition.cs" />
     <Compile Include="Assets\Scripts\CymbalScripts\BottomHiHatSound.cs" />
     <Compile Include="Assets\Scripts\CymbalScripts\CrashSound.cs" />
@@ -86,7 +78,6 @@
     <Compile Include="Assets\Scripts\SnareScripts\DetectSound.cs" />
     <Compile Include="Assets\Scripts\SoundController.cs" />
     <Compile Include="Assets\Scripts\StickMove.cs" />
-    <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
     <Reference Include="UnityEngine">
       <HintPath>D:/UnityEditors/2019.3.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

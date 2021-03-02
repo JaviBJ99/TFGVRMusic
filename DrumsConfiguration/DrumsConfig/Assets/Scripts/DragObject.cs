@@ -17,7 +17,6 @@ public class DragObject : MonoBehaviour
     {
         startPos = transform.position; // save position in case draged to invalid place
         movePlane = new Plane(-Camera.main.transform.forward, transform.position); // find a parallel plane to the camera based on obj start pos;
-        Debug.Log("ABAJO");
         
     }
 
@@ -57,12 +56,12 @@ public class DragObject : MonoBehaviour
 
     }
 
-    private void OnMouseExit()
+   /* private void OnMouseExit()
     {
         RBody = GetComponent<Rigidbody>();
         //RBody.constraints = RigidbodyConstraints.FreezeAll;
     }
-
+    */
 
 
 }
