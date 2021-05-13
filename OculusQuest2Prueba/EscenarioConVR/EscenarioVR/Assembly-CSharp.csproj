@@ -91,6 +91,7 @@
      <Compile Include="Assets\Scripts\BottomHiHatSound.cs" />
      <Compile Include="Assets\Scripts\RideBodySound.cs" />
      <Compile Include="Assets\Oculus\AudioManager\Scenes\Scripts\TestScript.cs" />
+     <Compile Include="Assets\Scripts\MeasureLatency.cs" />
  <Reference Include="Unity.XR.Management">
  <HintPath>D:/TFGGitHub/TFGVRMusic/OculusQuest2Prueba/EscenarioConVR/EscenarioVR/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
  </Reference>

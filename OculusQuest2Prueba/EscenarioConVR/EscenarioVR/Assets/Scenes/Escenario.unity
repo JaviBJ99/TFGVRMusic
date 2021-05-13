@@ -6343,6 +6343,7 @@ GameObject:
   - component: {fileID: 7718390322024843109}
   - component: {fileID: 124913065}
   - component: {fileID: 8296172667665953722}
+  - component: {fileID: 8296172667665953723}
   m_Layer: 0
   m_Name: crash
   m_TagString: Untagged
@@ -6446,6 +6447,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8296172667665953723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172667665953721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e503ea6418d27594caa33b93cac1b06a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableSpatialization: 1
+  gain: 10
+  useInvSqr: 1
+  near: 0.25
+  far: 100
+  volumetricRadius: 0
+  reverbSend: 10
+  enableRfl: 1
 --- !u!1 &8296172668013872431
 GameObject:
   m_ObjectHideFlags: 0
@@ -6532,6 +6553,7 @@ GameObject:
   - component: {fileID: 7718390321425744532}
   - component: {fileID: 789342222}
   - component: {fileID: 8296172668277175881}
+  - component: {fileID: 8296172668277175882}
   m_Layer: 0
   m_Name: ride
   m_TagString: Untagged
@@ -6635,6 +6657,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8296172668277175882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172668277175880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e503ea6418d27594caa33b93cac1b06a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableSpatialization: 1
+  gain: 10
+  useInvSqr: 1
+  near: 0.25
+  far: 100
+  volumetricRadius: 0
+  reverbSend: 10
+  enableRfl: 1
 --- !u!1 &8296172668530475671
 GameObject:
   m_ObjectHideFlags: 0
@@ -6648,6 +6690,7 @@ GameObject:
   - component: {fileID: 7718390323306722891}
   - component: {fileID: 1277578365}
   - component: {fileID: 8296172668530475672}
+  - component: {fileID: 8296172668530475673}
   m_Layer: 0
   m_Name: hihat_top
   m_TagString: Untagged
@@ -6751,6 +6794,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8296172668530475673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172668530475671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e503ea6418d27594caa33b93cac1b06a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableSpatialization: 1
+  gain: 10
+  useInvSqr: 1
+  near: 0.25
+  far: 100
+  volumetricRadius: 0
+  reverbSend: 10
+  enableRfl: 1
 --- !u!1 &8296172668637203487
 GameObject:
   m_ObjectHideFlags: 0
@@ -6764,6 +6827,7 @@ GameObject:
   - component: {fileID: 7718390323415546051}
   - component: {fileID: 882912123}
   - component: {fileID: 8296172668637203488}
+  - component: {fileID: 8296172668637203489}
   m_Layer: 0
   m_Name: tom
   m_TagString: Untagged
@@ -6867,6 +6931,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8296172668637203489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172668637203487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e503ea6418d27594caa33b93cac1b06a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableSpatialization: 1
+  gain: 10
+  useInvSqr: 1
+  near: 0.25
+  far: 100
+  volumetricRadius: 0
+  reverbSend: 10
+  enableRfl: 1
 --- !u!1 &8296172668655870085
 GameObject:
   m_ObjectHideFlags: 0
@@ -6880,6 +6964,7 @@ GameObject:
   - component: {fileID: 7718390323450975321}
   - component: {fileID: 135501552}
   - component: {fileID: 8296172668655870086}
+  - component: {fileID: 8296172668655870087}
   m_Layer: 0
   m_Name: snare
   m_TagString: Untagged
@@ -6983,6 +7068,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8296172668655870087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172668655870085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e503ea6418d27594caa33b93cac1b06a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableSpatialization: 1
+  gain: 10
+  useInvSqr: 1
+  near: 0.25
+  far: 100
+  volumetricRadius: 0
+  reverbSend: 10
+  enableRfl: 1
 --- !u!1 &8296172668746421447
 GameObject:
   m_ObjectHideFlags: 0
@@ -7050,6 +7155,7 @@ GameObject:
   - component: {fileID: 7718390322675770371}
   - component: {fileID: 190077797}
   - component: {fileID: 8296172669375926497}
+  - component: {fileID: 8296172669375926496}
   m_Layer: 0
   m_Name: goliath
   m_TagString: Untagged
@@ -7057,6 +7163,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8296172669375926496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669375926495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e503ea6418d27594caa33b93cac1b06a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableSpatialization: 1
+  gain: 10
+  useInvSqr: 1
+  near: 0.25
+  far: 100
+  volumetricRadius: 0
+  reverbSend: 10
+  enableRfl: 1
 --- !u!82 &8296172669375926497
 AudioSource:
   m_ObjectHideFlags: 0

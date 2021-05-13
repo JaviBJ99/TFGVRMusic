@@ -22,6 +22,7 @@ public class GoliathSound : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
 
+       
 
         AudioGoliath.PlayOneShot(gsound);
         

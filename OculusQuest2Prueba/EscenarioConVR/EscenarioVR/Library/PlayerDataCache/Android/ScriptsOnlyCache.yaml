@@ -6,6 +6,8 @@ ScriptsOnlyBuild:
     - ChangePosition
     - CrashSound
     - GoliathSound
+    - ONSPAudioSource
+    - ONSPSettings
     - RideBellSound
     - RideBodySound
     - SelectStage
@@ -79,41 +81,45 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11818}
     - Class: 114
-      Script: {instanceID: 11938}
+      Script: {instanceID: 11940}
     - Class: 114
-      Script: {instanceID: 11978}
-    - Class: 114
-      Script: {instanceID: 12644}
+      Script: {instanceID: 11980}
     - Class: 114
       Script: {instanceID: 12646}
     - Class: 114
-      Script: {instanceID: 12652}
+      Script: {instanceID: 12648}
     - Class: 114
-      Script: {instanceID: 12718}
+      Script: {instanceID: 12654}
     - Class: 114
-      Script: {instanceID: 12736}
+      Script: {instanceID: 12720}
     - Class: 114
-      Script: {instanceID: 12822}
+      Script: {instanceID: 12726}
     - Class: 114
-      Script: {instanceID: 13476}
+      Script: {instanceID: 12738}
     - Class: 114
-      Script: {instanceID: 13730}
+      Script: {instanceID: 12784}
     - Class: 114
-      Script: {instanceID: 14184}
+      Script: {instanceID: 12824}
     - Class: 114
-      Script: {instanceID: 14228}
+      Script: {instanceID: 13478}
     - Class: 114
-      Script: {instanceID: 14430}
+      Script: {instanceID: 13732}
     - Class: 114
-      Script: {instanceID: 14482}
+      Script: {instanceID: 14186}
     - Class: 114
-      Script: {instanceID: 14722}
+      Script: {instanceID: 14230}
     - Class: 114
-      Script: {instanceID: 14756}
+      Script: {instanceID: 14432}
     - Class: 114
-      Script: {instanceID: 14866}
+      Script: {instanceID: 14484}
     - Class: 114
-      Script: {instanceID: 14960}
+      Script: {instanceID: 14724}
+    - Class: 114
+      Script: {instanceID: 14758}
+    - Class: 114
+      Script: {instanceID: 14868}
+    - Class: 114
+      Script: {instanceID: 14962}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -1115,6 +1121,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.XR.Interaction.Toolkit.dll
     namespaceName: UnityEngine.XR.Interaction.Toolkit
     className: XRSimpleInteractable
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MeasureLatency
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
