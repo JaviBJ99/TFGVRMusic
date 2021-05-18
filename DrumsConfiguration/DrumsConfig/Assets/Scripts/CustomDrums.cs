@@ -5,11 +5,6 @@ using UnityEngine.UI;
 
 public class CustomDrums : MonoBehaviour
 {
-    public int toms;
-
-    public int ftoms;
-
-    public int crashes;
 
     public void changeToms(float n)
     {

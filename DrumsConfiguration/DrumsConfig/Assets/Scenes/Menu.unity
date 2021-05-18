@@ -1672,7 +1672,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SimpleDr
+          m_StringArgument: SimpleDrums
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1086171798
@@ -2208,9 +2208,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2f060a8f8a7fbd45bcc223d5665a2a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toms: 0
-  ftoms: 0
-  crashes: 0
 --- !u!1 &1582487884
 GameObject:
   m_ObjectHideFlags: 0

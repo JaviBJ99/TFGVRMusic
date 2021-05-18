@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class SetCustomDrums : MonoBehaviour
 {
-    // Start is called before the first frame update
-
-
     public CustomDrums customDrums;
 
     int numToms;
@@ -32,11 +29,7 @@ public class SetCustomDrums : MonoBehaviour
         setFToms(numFtoms);
         setCrashes(numCrashes); 
 
-
-
     }
-
-   
 
     public void setToms(int t)
     {
