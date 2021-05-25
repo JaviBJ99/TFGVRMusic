@@ -20,9 +20,12 @@ public class CrashSound : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-       
 
-        AudioCrash.PlayOneShot(csound);
+        if (collision.gameObject.tag == "SoundTag")
+        {
+            AudioCrash.PlayOneShot(csound);
+        }
+            
      
     }
 }

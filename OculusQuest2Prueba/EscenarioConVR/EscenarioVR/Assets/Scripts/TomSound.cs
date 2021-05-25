@@ -24,6 +24,10 @@ public class TomSound : MonoBehaviour
     {
         //typeOfSound.GoliathSound();
 
-        AudioTom.PlayOneShot(tsound);
+        if (collision.gameObject.tag == "SoundTag")
+        {
+            AudioTom.PlayOneShot(tsound);
+        }
+           
     }
 }

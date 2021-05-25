@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - AudioController
     - BottomHiHatSound
     - ChangePosition
+    - CheckVelocity
     - CrashSound
     - GoliathSound
     - KickDrumSound
@@ -18,7 +19,12 @@ ScriptsOnlyBuild:
     - StickMove
     - TomSound
     - TopHihatSound
+    Unity.CollabProxy.Editor.dll:
+    - Unity.Cloud.Collaborate.UserInterface.CollaborateWindow
+    - Unity.Cloud.Collaborate.UserInterface.WindowCache
     Unity.InputSystem.dll:
+    - UnityEngine.InputSystem.Editor.InputActionEditorWindow
+    - UnityEngine.InputSystem.InputActionAsset
     - UnityEngine.InputSystem.InputSettings
     - UnityEngine.InputSystem.InputSystemObject
     - UnityEngine.InputSystem.RemoteInputPlayerConnection
@@ -44,6 +50,8 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.SpatialTracking.dll:
     - UnityEngine.SpatialTracking.TrackedPoseDriver
+    UnityEngine.UI.dll:
+    - UnityEngine.UI.InputField
   sceneClasses:
     Assets/Scenes/Escenario.unity:
     - Class: 1
@@ -87,45 +95,49 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11978}
     - Class: 114
-      Script: {instanceID: 12644}
-    - Class: 114
-      Script: {instanceID: 12646}
-    - Class: 114
       Script: {instanceID: 12652}
     - Class: 114
-      Script: {instanceID: 12718}
+      Script: {instanceID: 12654}
     - Class: 114
-      Script: {instanceID: 12724}
+      Script: {instanceID: 12660}
     - Class: 114
-      Script: {instanceID: 12736}
+      Script: {instanceID: 12726}
     - Class: 114
-      Script: {instanceID: 12782}
+      Script: {instanceID: 12732}
     - Class: 114
-      Script: {instanceID: 12822}
+      Script: {instanceID: 12744}
     - Class: 114
-      Script: {instanceID: 13476}
+      Script: {instanceID: 12790}
     - Class: 114
-      Script: {instanceID: 13730}
+      Script: {instanceID: 12830}
     - Class: 114
-      Script: {instanceID: 14186}
+      Script: {instanceID: 13486}
     - Class: 114
-      Script: {instanceID: 14230}
+      Script: {instanceID: 13740}
     - Class: 114
-      Script: {instanceID: 14432}
+      Script: {instanceID: 13954}
     - Class: 114
-      Script: {instanceID: 14484}
+      Script: {instanceID: 14036}
     - Class: 114
-      Script: {instanceID: 14724}
+      Script: {instanceID: 14198}
     - Class: 114
-      Script: {instanceID: 14758}
+      Script: {instanceID: 14242}
     - Class: 114
-      Script: {instanceID: 14868}
+      Script: {instanceID: 14444}
     - Class: 114
-      Script: {instanceID: 14962}
+      Script: {instanceID: 14496}
     - Class: 114
-      Script: {instanceID: 16250}
+      Script: {instanceID: 14522}
     - Class: 114
-      Script: {instanceID: 16500}
+      Script: {instanceID: 14734}
+    - Class: 114
+      Script: {instanceID: 14744}
+    - Class: 114
+      Script: {instanceID: 14778}
+    - Class: 114
+      Script: {instanceID: 14888}
+    - Class: 114
+      Script: {instanceID: 14982}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -133,6 +145,8 @@ ScriptsOnlyBuild:
     - Class: 135
       Script: {instanceID: 0}
     - Class: 136
+      Script: {instanceID: 0}
+    - Class: 138
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -481,7 +495,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: c7faad5ded3055716c4bdef4ad735515
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: StickMove
@@ -493,7 +507,7 @@ ScriptsOnlyBuild:
     className: ONSPSettings
   - hash:
       serializedVersion: 2
-      Hash: 2e7969e56bb4d191df8e19498931dcaf
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ChangePosition
@@ -847,6 +861,12 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
+      Hash: e2166456eb724d232696d6c34fc96ea5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: KickDrumSound
+  - hash:
+      serializedVersion: 2
       Hash: c14e5fd61c3d85a09b644e07d0a5dc59
     assemblyName: Unity.XR.Interaction.Toolkit.dll
     namespaceName: UnityEngine.XR.Interaction.Toolkit
@@ -943,6 +963,18 @@ ScriptsOnlyBuild:
     className: XRInteractionManager
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CheckVelocity
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ControllerVelocity
+  - hash:
+      serializedVersion: 2
       Hash: 5d820a4b2d2a41b143640b8af1508079
     assemblyName: Unity.XR.Interaction.Toolkit.dll
     namespaceName: UnityEngine.XR.Interaction.Toolkit
@@ -989,6 +1021,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem.Editor
     className: AdvancedDropdownWindow
+  - hash:
+      serializedVersion: 2
+      Hash: b5aa21f8183ad00b7664d101b5453e94
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PrimaryButtonWatcher
   - hash:
       serializedVersion: 2
       Hash: 07ba0d142a3645c437f3355c404d7639
@@ -1151,18 +1189,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: b5aa21f8183ad00b7664d101b5453e94
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PrimaryButtonWatcher
-  - hash:
-      serializedVersion: 2
-      Hash: e2166456eb724d232696d6c34fc96ea5
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: KickDrumSound
   platform: 13
   scenePathNames:
   - Assets/Scenes/Escenario.unity

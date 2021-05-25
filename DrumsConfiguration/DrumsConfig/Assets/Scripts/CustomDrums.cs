@@ -6,6 +6,13 @@ using UnityEngine.UI;
 public class CustomDrums : MonoBehaviour
 {
 
+    public void Start()
+    {
+        Positions.nToms = 0;
+        Positions.nFToms = 0;
+        Positions.nCrashes = 0;
+    }
+    
     public void changeToms(float n)
     {
         Positions.nToms= (int)n;

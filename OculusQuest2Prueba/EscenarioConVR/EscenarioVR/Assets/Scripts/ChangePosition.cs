@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ChangePosition : MonoBehaviour
 {
-    // Start is called before the first frame update
+  /*  // Start is called before the first frame update
 
     public Scene escenario;
     public Scene estudio;
@@ -50,4 +50,5 @@ public class ChangePosition : MonoBehaviour
                 break;
         }
     }
+    */
 }

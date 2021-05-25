@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StickMove : MonoBehaviour
 {
-
+    /*
 
     private Vector3 mOffset;
 
@@ -66,5 +66,5 @@ public class StickMove : MonoBehaviour
     {
         transform.position = GetMouseWorldPos() + mOffset;
     }
-
+    */
 }

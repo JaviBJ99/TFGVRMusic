@@ -13,7 +13,7 @@ public class BottomHiHatSound : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         if (Input.GetKey(KeyCode.O))
         {
@@ -22,5 +22,6 @@ public class BottomHiHatSound : MonoBehaviour
         }
 
     }
+    */
 }
 
