@@ -15,6 +15,7 @@ public class GoliathSound : MonoBehaviour
 
     float TimeHit2;
 
+    public int bufferLength, numBuffers;
     void Start()
     {
         
@@ -30,6 +31,10 @@ public class GoliathSound : MonoBehaviour
             TimeHit2 = Time.time;
             
             AudioGoliath.PlayOneShot(gsound);
+            AudioSettings.GetDSPBufferSize(out bufferLength, out numBuffers);
+
+            Debug.Log(bufferLength);
+            Debug.Log(numBuffers);
 
             TimeHit2 = 0;
             plane1.timeHit1 = 0;

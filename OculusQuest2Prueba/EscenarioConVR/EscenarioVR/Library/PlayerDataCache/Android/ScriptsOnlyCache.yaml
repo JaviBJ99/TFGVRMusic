@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - AudioController
     - BottomHiHatSound
     - ChangePosition
+    - Console
     - CrashSound
     - GoliathSound
     - InstrumentSound
@@ -52,7 +53,13 @@ ScriptsOnlyBuild:
     UnityEngine.SpatialTracking.dll:
     - UnityEngine.SpatialTracking.TrackedPoseDriver
     UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
     - UnityEngine.UI.InputField
+    - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/Escenario.unity:
     - Class: 1
@@ -92,60 +99,76 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11818}
     - Class: 114
+      Script: {instanceID: 11854}
+    - Class: 114
       Script: {instanceID: 11938}
     - Class: 114
       Script: {instanceID: 11978}
     - Class: 114
-      Script: {instanceID: 12652}
+      Script: {instanceID: 12130}
+    - Class: 114
+      Script: {instanceID: 12192}
+    - Class: 114
+      Script: {instanceID: 12600}
     - Class: 114
       Script: {instanceID: 12654}
     - Class: 114
-      Script: {instanceID: 12660}
+      Script: {instanceID: 12656}
     - Class: 114
-      Script: {instanceID: 12726}
+      Script: {instanceID: 12662}
     - Class: 114
-      Script: {instanceID: 12732}
+      Script: {instanceID: 12728}
     - Class: 114
-      Script: {instanceID: 12744}
+      Script: {instanceID: 12734}
     - Class: 114
-      Script: {instanceID: 12790}
+      Script: {instanceID: 12746}
     - Class: 114
-      Script: {instanceID: 12830}
+      Script: {instanceID: 12792}
     - Class: 114
-      Script: {instanceID: 13272}
+      Script: {instanceID: 12832}
     - Class: 114
-      Script: {instanceID: 13488}
+      Script: {instanceID: 12886}
     - Class: 114
-      Script: {instanceID: 13742}
+      Script: {instanceID: 13274}
     - Class: 114
-      Script: {instanceID: 13956}
+      Script: {instanceID: 13490}
     - Class: 114
-      Script: {instanceID: 14038}
+      Script: {instanceID: 13744}
     - Class: 114
-      Script: {instanceID: 14200}
+      Script: {instanceID: 13958}
     - Class: 114
-      Script: {instanceID: 14244}
+      Script: {instanceID: 14040}
     - Class: 114
-      Script: {instanceID: 14446}
+      Script: {instanceID: 14202}
     - Class: 114
-      Script: {instanceID: 14498}
+      Script: {instanceID: 14246}
     - Class: 114
-      Script: {instanceID: 14644}
+      Script: {instanceID: 14422}
     - Class: 114
-      Script: {instanceID: 14734}
+      Script: {instanceID: 14448}
     - Class: 114
-      Script: {instanceID: 14744}
+      Script: {instanceID: 14500}
     - Class: 114
-      Script: {instanceID: 14778}
+      Script: {instanceID: 14646}
     - Class: 114
-      Script: {instanceID: 14888}
+      Script: {instanceID: 14736}
     - Class: 114
-      Script: {instanceID: 14982}
+      Script: {instanceID: 14746}
     - Class: 114
-      Script: {instanceID: 16160}
+      Script: {instanceID: 14780}
+    - Class: 114
+      Script: {instanceID: 14890}
+    - Class: 114
+      Script: {instanceID: 14984}
+    - Class: 114
+      Script: {instanceID: 14996}
+    - Class: 114
+      Script: {instanceID: 16200}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 135
       Script: {instanceID: 0}
@@ -158,6 +181,14 @@ ScriptsOnlyBuild:
     - Class: 164
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
     - Class: 241
       Script: {instanceID: 0}
@@ -450,6 +481,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem.UI
     className: TrackedDeviceRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Console
   - hash:
       serializedVersion: 2
       Hash: 5ab533713adae59372fb3e10a585c186
@@ -908,7 +945,7 @@ ScriptsOnlyBuild:
     className: DeviceBasedContinuousTurnProvider
   - hash:
       serializedVersion: 2
-      Hash: a6b28880f753694a1df2b608643e64f1
+      Hash: fba36a3dafcba182418db21602b9b837
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GoliathSound
@@ -1010,7 +1047,7 @@ ScriptsOnlyBuild:
     className: ONSPPropagationGeometry
   - hash:
       serializedVersion: 2
-      Hash: cd08277ef4960b32319433fc196fea51
+      Hash: 375b1aafeef74ecc16c45ee07af74abb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: InstrumentSound
