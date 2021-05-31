@@ -34,4 +34,9 @@ public class Console : MonoBehaviour
 
 
     }
+
+    public void hoop(string s)
+    {
+        message.text = s;
+    }
 }

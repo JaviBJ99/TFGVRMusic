@@ -6,28 +6,57 @@ public class SnareSound : MonoBehaviour
 {
 
 
-    float TimeHitHoop;
-    float TimeHitSnare;
+   public float TimeHitHoop;
+    public float TimeHitSnare;
 
-    public GameObject crash;
+    public GameObject snare;
     AudioSource AudioSnare;
     public AudioClip stroke;
     public AudioClip hoop;
     public AudioClip rimshot;
+    public PlaneOne plane1;
 
 
     void Start()
     {
 
-        AudioSnare = crash.GetComponent<AudioSource>();
+        AudioSnare = snare.GetComponent<AudioSource>();
 
     }
 
 
 
-
     public void OnCollisionEnter(Collision collision)
     {
+        if (plane1.timeHit1 != 0)
+        {
+            if (TimeHitHoop > 0.0f && TimeHitSnare > 0.0f && (TimeHitSnare - TimeHitHoop <= Mathf.Abs(0.07f)))
+            {
+                AudioSnare.PlayOneShot(rimshot);
+                TimeHitHoop = 0.0f;
+                TimeHitSnare = 0.0f;
+            }
+
+            else if (TimeHitSnare > 0 && TimeHitHoop == 0)
+            {
+                AudioSnare.PlayOneShot(stroke);
+                TimeHitHoop = 0.0f;
+                TimeHitSnare = 0.0f;
+            }
+
+            else if (TimeHitSnare == 0 && TimeHitHoop > 0)
+            {
+                AudioSnare.PlayOneShot(hoop);
+                TimeHitHoop = 0.0f;
+                TimeHitSnare = 0.0f;
+            }
+
+            plane1.timeHit1 = 0;
+
+        }
+
+
+        /*
         foreach (ContactPoint contact in collision.contacts)
         {
 
@@ -48,28 +77,43 @@ public class SnareSound : MonoBehaviour
             }
 
         }
+        
 
-        if (TimeHitHoop > 0.0f && TimeHitSnare > 0.0f && (TimeHitSnare - TimeHitHoop <= Mathf.Abs(0.07f)))
-        {
-            AudioSnare.PlayOneShot(rimshot);
-            TimeHitHoop = 0.0f;
-            TimeHitSnare = 0.0f;
-        }
-
-        else if (TimeHitSnare > 0 && TimeHitHoop == 0)
-        {
-            AudioSnare.PlayOneShot(stroke);
-            TimeHitHoop = 0.0f;
-            TimeHitSnare = 0.0f;
-        }
-
-        else if (TimeHitSnare == 0 && TimeHitHoop > 0)
-        {
-            AudioSnare.PlayOneShot(hoop);
-            TimeHitHoop = 0.0f;
-            TimeHitSnare = 0.0f;
-        }
 
 
     }
+    public void selectSound()
+    {
+
+        if (plane1.timeHit1 != 0)
+        {
+            if (TimeHitHoop > 0.0f && TimeHitSnare > 0.0f && (TimeHitSnare - TimeHitHoop <= Mathf.Abs(0.07f)))
+            {
+                AudioSnare.PlayOneShot(rimshot);
+                TimeHitHoop = 0.0f;
+                TimeHitSnare = 0.0f;
+            }
+
+            else if (TimeHitSnare > 0 && TimeHitHoop == 0)
+            {
+                AudioSnare.PlayOneShot(stroke);
+                TimeHitHoop = 0.0f;
+                TimeHitSnare = 0.0f;
+            }
+
+            else if (TimeHitSnare == 0 && TimeHitHoop > 0)
+            {
+                AudioSnare.PlayOneShot(hoop);
+                TimeHitHoop = 0.0f;
+                TimeHitSnare = 0.0f;
+            }
+
+            plane1.timeHit1 = 0;
+
+        }
+
+            
+    */
+    }
+
 }
