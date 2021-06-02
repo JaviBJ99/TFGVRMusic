@@ -25,6 +25,39 @@ public class InstrumentSound : MonoBehaviour
 
     }
 
+
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (plane1.timeHit1 != 0 && other.gameObject.tag == "SoundTag")
+        {
+            TimeHit2 = Time.time;
+
+            if (TimeHit2 - plane1.timeHit1 <= Mathf.Abs(0.7f))
+            {
+                AudioInstrument.PlayOneShot(sound);
+            }
+
+            
+
+            /*
+            AudioSettings.GetDSPBufferSize(out bufferLength, out numBuffers);
+
+            sampleRate = AudioSettings.outputSampleRate;
+            
+
+            console.showText(bufferLength, sampleRate);
+            */
+
+            TimeHit2 = 0;
+            plane1.timeHit1 = 0;
+
+
+        }
+
+    }
+    /*
     private void OnCollisionEnter(Collision collision)
     {
         if (plane1.timeHit1 != 0 && collision.gameObject.tag == "SoundTag")
@@ -33,19 +66,21 @@ public class InstrumentSound : MonoBehaviour
 
             AudioInstrument.PlayOneShot(sound);
 
+            
             AudioSettings.GetDSPBufferSize(out bufferLength, out numBuffers);
 
             sampleRate = AudioSettings.outputSampleRate;
             
 
             console.showText(bufferLength, sampleRate);
-
+            
 
             TimeHit2 = 0;
             plane1.timeHit1 = 0;
 
 
         }
-    ;
+    
     }
+    */
 }

@@ -76,6 +76,7 @@
     <Compile Include="Assets\Oculus\Spatializer\scripts\ONSPProfiler.cs" />
     <Compile Include="Assets\Oculus\Spatializer\scripts\ONSPPropagationInterface.cs" />
     <Compile Include="Assets\Oculus\Spatializer\scripts\helpers\ONSPReflectionZone.cs" />
+    <Compile Include="Assets\Scripts\DrumsSound\StrokeCollider.cs" />
     <Compile Include="Assets\Scripts\PlaneTriggers\PlaneOne.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scripts\Utils\InspectorNoteAttribute.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scripts\Utils\FastList.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="Assets\Oculus\Spatializer\scripts\ONSPPropagationMaterial.cs" />
     <Compile Include="Assets\Oculus\Spatializer\scripts\ONSPPropagationSettings.cs" />
     <Compile Include="Assets\Scripts\DrumsSound\SnareSound.cs" />
+    <Compile Include="Assets\Scripts\ChangeScenes\ChangeScene.cs" />
     <Compile Include="Assets\Oculus\Spatializer\scripts\ONSPPropagationGeometry.cs" />
     <Compile Include="Assets\Scripts\DrumsSound\InstrumentSound.cs" />
     <Compile Include="Assets\Scripts\DrumsSound\HoopDetectSound.cs" />
@@ -101,7 +103,7 @@
     <Compile Include="Assets\Oculus\AudioManager\Scenes\Scripts\TestScript.cs" />
     <Compile Include="Assets\Scripts\MeasureLatency.cs" />
     <Compile Include="Assets\Scripts\PlaneTriggers\PlaneTwo.cs" />
-    <Compile Include="Assets\Scripts\DrumsSound\StrokeCollider.cs" />
+    <Compile Include="Assets\Scripts\MoveInstruments\DragObject.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Oculus\Spatializer\Plugins\x86\AudioPluginOculusSpatializer.dll" />

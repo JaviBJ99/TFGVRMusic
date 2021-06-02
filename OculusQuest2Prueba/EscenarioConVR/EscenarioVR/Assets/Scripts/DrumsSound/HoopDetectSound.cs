@@ -10,15 +10,17 @@ public class HoopDetectSound : MonoBehaviour
 
     public Console console;
 
-    public void OnCollisionEnter(Collision collision)
+
+    public void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "SoundTag")
+
+        if (other.gameObject.tag == "SoundTag")
         {
 
             snare.TimeHitHoop = Time.deltaTime;
             console.hoop("yes");
         }
-          
-        
+
     }
+    
 }

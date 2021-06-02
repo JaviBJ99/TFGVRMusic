@@ -4,7 +4,19 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/MainMenu.unity
+    guid: acdb43c1d6820f8459ce53da442f893d
+  - enabled: 0
+    path: Assets/Scenes/ProDrums.unity
+    guid: a105e92ae59a58d4889e6af94b2cfa5e
+  - enabled: 0
+    path: Assets/Scenes/ClassicDrums.unity
+    guid: 51aae9e81f25e244d898e0b8e472d10e
+  - enabled: 1
+    path: Assets/Scenes/TotalConfiguration.unity
+    guid: 8f9ec8936bbbfe4449cd8b4561e73f30
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 93a1eef0f0057ef44b13c571aae90965, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 403524319d35d844d97bafa1979582d6, type: 2}

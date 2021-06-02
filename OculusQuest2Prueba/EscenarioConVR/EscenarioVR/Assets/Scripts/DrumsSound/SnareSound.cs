@@ -24,8 +24,39 @@ public class SnareSound : MonoBehaviour
 
     }
 
+    public void OnTriggerEnter(Collider other)
+    {
+        if (plane1.timeHit1 != 0)
+        {
+            if (TimeHitHoop > 0.0f && TimeHitSnare > 0.0f && (TimeHitSnare - TimeHitHoop <= Mathf.Abs(0.07f)))
+            {
+                AudioSnare.PlayOneShot(rimshot);
+                TimeHitHoop = 0.0f;
+                TimeHitSnare = 0.0f;
+            }
+
+            else if (TimeHitSnare > 0 && TimeHitHoop == 0)
+            {
+                AudioSnare.PlayOneShot(stroke);
+                TimeHitHoop = 0.0f;
+                TimeHitSnare = 0.0f;
+            }
+
+            else if (TimeHitSnare == 0 && TimeHitHoop > 0)
+            {
+                AudioSnare.PlayOneShot(hoop);
+                TimeHitHoop = 0.0f;
+                TimeHitSnare = 0.0f;
+            }
+
+            plane1.timeHit1 = 0;
+
+        }
 
 
+    }
+
+    /*
     public void OnCollisionEnter(Collision collision)
     {
         if (plane1.timeHit1 != 0)
@@ -56,7 +87,7 @@ public class SnareSound : MonoBehaviour
         }
 
 
-        /*
+        
         foreach (ContactPoint contact in collision.contacts)
         {
 
@@ -82,38 +113,13 @@ public class SnareSound : MonoBehaviour
 
 
     }
-    public void selectSound()
-    {
-
-        if (plane1.timeHit1 != 0)
-        {
-            if (TimeHitHoop > 0.0f && TimeHitSnare > 0.0f && (TimeHitSnare - TimeHitHoop <= Mathf.Abs(0.07f)))
-            {
-                AudioSnare.PlayOneShot(rimshot);
-                TimeHitHoop = 0.0f;
-                TimeHitSnare = 0.0f;
-            }
-
-            else if (TimeHitSnare > 0 && TimeHitHoop == 0)
-            {
-                AudioSnare.PlayOneShot(stroke);
-                TimeHitHoop = 0.0f;
-                TimeHitSnare = 0.0f;
-            }
-
-            else if (TimeHitSnare == 0 && TimeHitHoop > 0)
-            {
-                AudioSnare.PlayOneShot(hoop);
-                TimeHitHoop = 0.0f;
-                TimeHitSnare = 0.0f;
-            }
-
-            plane1.timeHit1 = 0;
-
-        }
+    
 
             
-    */
+    
     }
 
+    */
 }
+
+   

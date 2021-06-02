@@ -5,18 +5,16 @@ using UnityEngine;
 public class StrokeCollider : MonoBehaviour
 {
     public SnareSound snare;
-    
 
 
-    public void OnCollisionEnter(Collision collision)
+    public void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "SoundTag")
+        if (other.gameObject.tag == "SoundTag")
         {
             snare.TimeHitSnare = Time.deltaTime;
-          
+
         }
 
-
     }
-
+    
 }

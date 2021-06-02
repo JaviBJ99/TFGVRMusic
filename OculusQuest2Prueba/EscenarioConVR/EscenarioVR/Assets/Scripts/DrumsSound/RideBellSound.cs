@@ -20,13 +20,14 @@ public class RideBellSound : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter(Collision collision)
+
+    public void OnTriggerEnter(Collider other)
     {
-        //typeOfSound.GoliathSound();
-        if (collision.gameObject.tag == "SoundTag")
+        if (other.gameObject.tag == "SoundTag")
         {
             AudioBell.PlayOneShot(bsound);
         }
-            
+
     }
+   
 }
