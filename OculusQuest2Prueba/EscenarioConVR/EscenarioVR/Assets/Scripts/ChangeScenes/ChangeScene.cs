@@ -17,7 +17,7 @@ public class ChangeScene : MonoBehaviour
         
     }
 
-    public void selectChange(string s)
+    public void selectScene(string s)
     {
         SceneManager.LoadScene(s);
     }

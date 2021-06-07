@@ -11,12 +11,8 @@ public class InstrumentSound : MonoBehaviour
 
     public PlaneOne plane1;
 
-    
-    public int bufferLength, numBuffers, sampleRate;
-
     float TimeHit2;
 
-    public Console console;
 
     void Start()
     {

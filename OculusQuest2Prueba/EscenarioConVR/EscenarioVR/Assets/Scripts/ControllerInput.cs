@@ -7,13 +7,13 @@ using UnityEngine.XR;
 
 public class ControllerInput : MonoBehaviour
 {
-    private InputDevice device;
+   /* private InputDevice device;
 
     private XRNode xrNode = XRNode.LeftHand;
 
     private List<InputDevice> devices = new List <InputDevice>();
 
-
+    */
  
    
 

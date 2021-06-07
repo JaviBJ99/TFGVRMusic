@@ -18,7 +18,7 @@ public class HoopDetectSound : MonoBehaviour
         {
 
             snare.TimeHitHoop = Time.deltaTime;
-            console.hoop("yes");
+            
         }
 
     }
