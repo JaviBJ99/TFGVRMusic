@@ -16,11 +16,14 @@ EditorBuildSettings:
     guid: 51aae9e81f25e244d898e0b8e472d10e
   - enabled: 1
     path: Assets/Scenes/ProDrums.unity
-    guid: a105e92ae59a58d4889e6af94b2cfa5e
+    guid: 07febf5f83394594c90bf909cd1e4c4a
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/SimpleDrums.unity
     guid: 691babd4b8c3f8b4094409de7a49d6d5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TotalConfiguration.unity
     guid: 8f9ec8936bbbfe4449cd8b4561e73f30
   - enabled: 1

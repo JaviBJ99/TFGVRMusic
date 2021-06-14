@@ -58,11 +58,13 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\TypeOfSoundController.cs" />
     <Compile Include="Assets\Oculus\Spatializer\scripts\ONSPVersion.cs" />
-    <Compile Include="Assets\Scripts\Positions.cs" />
+    <Compile Include="Assets\Scripts\ChangeScenes\Positions.cs" />
     <Compile Include="Assets\Scripts\DrumsSound\TomSound.cs" />
     <Compile Include="Assets\Oculus\Spatializer\scripts\OculusSpatializerUnity.cs" />
     <Compile Include="Assets\Scripts\DrumsSound\TopHihatSound.cs" />
+    <Compile Include="Assets\Scripts\SecondaryButtonWatcher.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\SoundEmitter.cs" />
+    <Compile Include="Assets\Scripts\DrumsSound\ReverbSelector.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\MinMaxAttribute.cs" />
     <Compile Include="Assets\Scripts\Console.cs" />
     <Compile Include="Assets\Scripts\BackToMenu.cs" />
@@ -77,8 +79,9 @@
     <Compile Include="Assets\Oculus\Spatializer\scripts\ONSPProfiler.cs" />
     <Compile Include="Assets\Scripts\DrumChoice.cs" />
     <Compile Include="Assets\Oculus\Spatializer\scripts\ONSPPropagationInterface.cs" />
+    <Compile Include="Assets\Scripts\ChangeScenes\StageConfigurations.cs" />
     <Compile Include="Assets\Oculus\Spatializer\scripts\helpers\ONSPReflectionZone.cs" />
-    <Compile Include="Assets\Scripts\DrumsSound\StrokeCollider.cs" />
+    <Compile Include="Assets\Scripts\DrumsSound\PadSound.cs" />
     <Compile Include="Assets\Scripts\PlaneTriggers\PlaneOne.cs" />
     <Compile Include="Assets\Config.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scripts\Utils\InspectorNoteAttribute.cs" />
@@ -86,7 +89,7 @@
     <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\SoundFX.cs" />
     <Compile Include="Assets\Scripts\SoundController.cs" />
     <Compile Include="Assets\Scripts\SelectObjectToCreate.cs" />
-    <Compile Include="Assets\Scripts\CustomDrums.cs" />
+    <Compile Include="Assets\Scripts\ChangeScenes\CustomDrums.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\AmbienceEmitter.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\AudioManager_Sound.cs" />
     <Compile Include="Assets\Oculus\Spatializer\scripts\ONSPAmbisonicsNative.cs" />
@@ -94,23 +97,25 @@
     <Compile Include="Assets\Scripts\DrumsSound\KickDrumSound.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\SoundFXRef.cs" />
     <Compile Include="Assets\Scripts\ControllerInput.cs" />
+    <Compile Include="Assets\Scripts\ChangeScenes\SetModifyStage.cs" />
     <Compile Include="Assets\Scripts\DrumsSound\GoliathSound.cs" />
     <Compile Include="Assets\Oculus\Spatializer\scripts\ONSPPropagationMaterial.cs" />
     <Compile Include="Assets\Oculus\Spatializer\scripts\ONSPPropagationSettings.cs" />
     <Compile Include="Assets\Scripts\DrumsSound\SnareSound.cs" />
+    <Compile Include="Assets\Scripts\ChangeScenes\ModifyStage.cs" />
     <Compile Include="Assets\Scripts\ChangeScenes\ChangeScene.cs" />
     <Compile Include="Assets\Oculus\Spatializer\scripts\ONSPPropagationGeometry.cs" />
     <Compile Include="Assets\Scripts\DrumsSound\InstrumentSound.cs" />
-    <Compile Include="Assets\Scripts\DrumsSound\HoopDetectSound.cs" />
+    <Compile Include="Assets\Scripts\DrumsSound\HoopSound.cs" />
     <Compile Include="Assets\Scripts\PrimaryButtonWatcher.cs" />
     <Compile Include="Assets\Scripts\DrumsSound\HiHatSound.cs" />
-    <Compile Include="Assets\Scripts\SetCustomDrums.cs" />
+    <Compile Include="Assets\Scripts\ChangeScenes\SetCustomDrums.cs" />
     <Compile Include="Assets\Scripts\DrumsSound\RideBodySound.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scenes\Scripts\TestScript.cs" />
     <Compile Include="Assets\Scripts\MoveInstruments\DragObject.cs" />
     <Compile Include="Assets\Scripts\MeasureLatency.cs" />
     <Compile Include="Assets\Scripts\PlaneTriggers\PlaneTwo.cs" />
-    <Compile Include="Assets\Scripts\SecondaryButtonWatcher.cs" />
+    <Compile Include="Assets\Scripts\DrumsSound\ChangeReverb.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Oculus\Spatializer\Plugins\x86\AudioPluginOculusSpatializer.dll" />

@@ -15,6 +15,7 @@ public class GoliathSound : MonoBehaviour
 
     float TimeHit2;
 
+
     public int bufferLength, numBuffers;
     void Start()
     {

@@ -55,6 +55,16 @@ public class HiHatSound : MonoBehaviour
     {
         if (pressed)
         {
+            if (open)
+            {
+                AudioHihat.Stop();
+                AudioHihat.PlayOneShot(closesound);
+            }
+            else
+            {
+                
+                AudioHihat.PlayOneShot(opensound);
+            }
             open = !open;
             
         }

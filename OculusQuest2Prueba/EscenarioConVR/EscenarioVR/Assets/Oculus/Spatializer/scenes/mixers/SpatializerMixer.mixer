@@ -22,7 +22,7 @@ AudioMixerController:
     - 725e77d6ee2433b4388bc90340f64b61
     name: View
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: 24500003}
+  m_TargetSnapshot: {fileID: 245000012928175524}
 --- !u!243 &24300001
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -148,6 +148,7 @@ AudioMixerSnapshotController:
     017e1c84d5ff649438cf7217f015a04f: 100
     f55c0bb461c06f4419674ef5c9fa9953: 1
     229fbec47d0de58408d0541ea2fa4c0e: 1.17
+    3d9ba71546a205a4182ac967a301d4fc: 0
     69fd3b2517a15694981ee4474e36eeeb: 35
     c04dfb256afb48d499bb4540ed5265bb: 0.696
     eedb6e2560b96954f80a6216a070957a: 0.4
@@ -160,6 +161,7 @@ AudioMixerSnapshotController:
     bd33a706336bb6742960b31b56d6d312: 0
     70fb34464dced4d4fa0fcbc0a9bbcb03: 104
     d141dd76886b140438f5d296bb8780c0: 250
+    71c96e960f41ab94c8a5be764bc9064c: -698
     fd57dbc6c9ab56441b50cb4ec452b383: 0.5
     0b9824d66b0abf64f9c881b46383bcc5: 157
     f5d601f6a1282e848b1945fd6c7c37a6: 0.512
@@ -167,6 +169,8 @@ AudioMixerSnapshotController:
     1a8948470036df943be2b94d699cf4e9: 95
     285e7a478d90a1f4ea39bf4e24e02ebf: 3.2656894
     afbfe0879e482b64b9dd4ceeeed82492: 0.33
+    ce95718707015674d9d9e4cb32b89638: 0.33
+    0cc23297eedbada40a45098ad8e7b862: 16
     ae6a7db7773ab66468e20795efab2e3e: 43
     c37752d75bf132d47a7c3a93049722dc: 1
     74df97f7555fd2241a41f845aa8c4d21: 0.353
@@ -206,6 +210,7 @@ AudioMixerSnapshotController:
     0cec4d9bf29009a49b37a268bbb73fd6: 1
     fe36acab8a96d0046bafeb9e18a753df: 0.073
     e8c2f6cb7d022d545b278ca41f5588ba: 40
+    e0184bcb6542faf4e91ebe8c3636e34e: -1000
     34546ccb2e240cd48bcca671564120ce: 0
     5cbf6ddbb7026dc45abe06cc43322e1c: 200
     cc132edbccace48469977b60edca52a5: 0.447
@@ -242,7 +247,9 @@ AudioMixerSnapshotController:
     cad173aee6b7e8c45ac30f9cc5e32b2c: 0
     b3b0eede46f5b304ba700843076db719: 0.209
     141e6fde7f4d66a4d9ce1878b64dc199: -28
+    c709441fca9d42a4e92ae7116dcb4833: -1166
     b1ed842f163fcae4989e68a530e081fd: 0.47
+    954c4e2fd6e50b84c94e985f7428642a: 7.24
     1b16bf2faec4ce249a80ce7b9f1346bd: 0.406
     96bb113f992376e479fa8b09b724413d: 0.696
     29b9835ff985b2e4c97d9e4ee57e84b1: 0.415
