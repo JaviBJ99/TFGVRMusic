@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class InstrumentSound : MonoBehaviour
 {
@@ -12,15 +13,24 @@ public class InstrumentSound : MonoBehaviour
     public PlaneOne plane1;
 
 
-    float TimeHit2, vol, db;
+    float TimeHit2, t, db, v, e;
 
     public Text texto;
+
+    public int bufferLength, numBuffers;
+
+    float totalHits = 0;
+    float totalv = 0;
+    float average = 0;
+
+    Vector3 distance;
 
     void Start()
     {
 
         AudioInstrument = instrument.GetComponent<AudioSource>();
-    
+        distance = transform.position - instrument.transform.position;
+        e = Mathf.Abs(distance.y);
     }
 
 
@@ -30,28 +40,45 @@ public class InstrumentSound : MonoBehaviour
     {
         if (plane1.timeHit1 != 0 && other.gameObject.tag == "SoundTag")
         {
-
+            totalHits += 1;
             TimeHit2 = Time.time;
 
-            vol = Mathf.Abs(TimeHit2 - plane1.timeHit1);
+            t = Mathf.Abs(TimeHit2 - plane1.timeHit1);
 
-            if (vol <= 0.8f)
-            {
-                
-                if (vol < 0.1f)
-                {
-                    vol = 0.1f;
-                }
-           
-                db = -20.0f * Mathf.Log10(vol);
-                db = db / 20.0f;
             
+
+            if (t <= 1.1f)
+            {
+
+                if (t < 0.1f)
+                {
+                    t = 0.1f;
+                }
+
+               
+                v = e / t;
+                totalv += v;
+                average = totalv / totalHits;
+
+
+                db = -20.0f * Mathf.Log10(t);
+                db = db / 20.0f;
+
                 AudioInstrument.volume = db;
                 AudioInstrument.PlayOneShot(sound);
-                //texto.text = "volumen " + vol + " decibelios" + db;
+
+
+
+                AudioSettings.GetDSPBufferSize(out bufferLength, out numBuffers);
+
+
+                //texto.text = "bufferLength " + bufferLength + " numBuffers " + numBuffers + " sample rate " + AudioSettings.outputSampleRate;
+                //texto.text = "velocidad " + v + " decibelios" + db;
+                //texto.text = "golpes " + totalHits + " velocidad total " + totalv + " velocidad media " + average;
+                texto.text = "espacio " + e + " tiempo " + t; 
             }
 
-            
+
 
             /*
             AudioSettings.GetDSPBufferSize(out bufferLength, out numBuffers);

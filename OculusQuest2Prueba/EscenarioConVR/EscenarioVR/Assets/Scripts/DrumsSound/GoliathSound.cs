@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
+using UnityEngine.UI;
 
 public class GoliathSound : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class GoliathSound : MonoBehaviour
     public GameObject goliath;
     AudioSource AudioGoliath;
     public AudioClip  gsound;
+    public Text texto;
 
     public PlaneOne plane1;
 
@@ -33,9 +35,9 @@ public class GoliathSound : MonoBehaviour
             
             AudioGoliath.PlayOneShot(gsound);
             AudioSettings.GetDSPBufferSize(out bufferLength, out numBuffers);
+          
 
-            Debug.Log(bufferLength);
-            Debug.Log(numBuffers);
+            texto.text = "bufferLength " + bufferLength + " numBuffers " + numBuffers + " sample rate " + AudioSettings.outputSampleRate;
 
             TimeHit2 = 0;
             plane1.timeHit1 = 0;
