@@ -5,6 +5,18 @@ TagManager:
   serializedVersion: 2
   tags:
   - DrumPart
+  - Goliath1
+  - Goliath2
+  - Tom1
+  - Tom2
+  - Tom3
+  - Crash1
+  - Crash2
+  - Crash3
+  - Ride
+  - Kick
+  - Snare
+  - Hihat
   layers:
   - Default
   - TransparentFX

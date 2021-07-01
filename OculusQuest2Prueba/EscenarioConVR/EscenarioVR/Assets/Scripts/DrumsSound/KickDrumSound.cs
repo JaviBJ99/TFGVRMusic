@@ -18,7 +18,6 @@ public class KickDrumSound : MonoBehaviour
     {
         watcher.primaryButtonPress.AddListener(onPrimaryButtonEvent);
         AudioKick = kick.GetComponent<AudioSource>();
-
         m = maza.GetComponent<Animation>();
         p = pedal.GetComponent<Animation>();
 

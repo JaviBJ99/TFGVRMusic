@@ -5,6 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - SoundTag
+  - Goliath1
+  - Goliath2
+  - Tom1
+  - Tom2
+  - Tom3
+  - Crash1
+  - Crash2
+  - Crash3
+  - Ride
   layers:
   - Default
   - TransparentFX

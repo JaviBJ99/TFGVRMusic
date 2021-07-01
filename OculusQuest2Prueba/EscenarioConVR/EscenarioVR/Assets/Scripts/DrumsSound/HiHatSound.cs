@@ -5,25 +5,30 @@ using UnityEngine;
 public class HiHatSound : MonoBehaviour
 {
     public SecondaryButtonWatcher watcher;
-    public bool IsPressed = false; // used to display button state in the Unity Inspector window
-    public MoveHiHat move;
-    public GameObject hihat;
+
+    public GameObject hihat, top;
+
+    private Animation move;
+
     AudioSource AudioHihat;
+
     public AudioClip opensound, closesound;
+
     bool open = false;
 
     float TimeHit2;
 
-    Vector3 closepos, openpos;
-
     public PlaneOne plane1;
+
+    float t, db;
 
 
     void Start()
     {
         watcher.secondaryButtonPress.AddListener(onSecondaryButtonEvent);
         AudioHihat = hihat.GetComponent<AudioSource>();
-   
+        move = top.GetComponent<Animation>();
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -32,17 +37,32 @@ public class HiHatSound : MonoBehaviour
         {
             TimeHit2 = Time.time;
 
-            if (TimeHit2 - plane1.timeHit1 <= Mathf.Abs(0.7f))
+            t = Mathf.Abs(TimeHit2 - plane1.timeHit1);
+
+            if (t <= 1.1f)
             {
+
+                if (t < 0.1f)
+                {
+                    t = 0.1f;
+                }
+
+                db = -20.0f * Mathf.Log10(t);
+                db = db / 20.0f;
+
+                AudioHihat.volume = db;
+
+
                 if (open)
                 {
                     AudioHihat.PlayOneShot(opensound);
+
                 }
                 else
                 {
                     AudioHihat.PlayOneShot(closesound);
                 }
-                
+
             }
 
             TimeHit2 = 0;
@@ -61,20 +81,14 @@ public class HiHatSound : MonoBehaviour
            
             if (open)
             {
-                Debug.Log(closepos);
                 AudioHihat.Stop();
-                //hihat.SetActive(true);
-                //move.HiHatMove(!open);
+                move.Play("Close");
                 AudioHihat.PlayOneShot(closesound);
-
             }
             else
             {
-                Debug.Log(openpos);
-                //hihat.SetActive(false);
-                //move.HiHatMove(open);
+                move.Play("Open");
                 AudioHihat.PlayOneShot(opensound);
-
             }
             open = !open;
             

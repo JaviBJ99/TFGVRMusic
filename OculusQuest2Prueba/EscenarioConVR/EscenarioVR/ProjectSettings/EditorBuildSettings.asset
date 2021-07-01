@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
+    path: Assets/Scenes/VirtualProxy.unity
+    guid: 155212a1365e42a43b4d435275ede37e
+  - enabled: 1
     path: Assets/Scenes/SimpleDrums.unity
     guid: 691babd4b8c3f8b4094409de7a49d6d5
   - enabled: 0
@@ -29,6 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AdvancedDrums.unity
     guid: 11283839d7967d84697b732a26c24220
+  - enabled: 1
+    path: Assets/Scenes/TotalConfigurationDrums.unity
+    guid: 52dfc997422c96248807ccdb2f7d6a77
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 93a1eef0f0057ef44b13c571aae90965, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 403524319d35d844d97bafa1979582d6, type: 2}

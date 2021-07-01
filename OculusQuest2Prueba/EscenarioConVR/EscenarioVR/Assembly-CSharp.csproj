@@ -66,6 +66,7 @@
     <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\SoundEmitter.cs" />
     <Compile Include="Assets\Scripts\DrumsSound\ReverbSelector.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\MinMaxAttribute.cs" />
+    <Compile Include="Assets\Scripts\Creator.cs" />
     <Compile Include="Assets\Scripts\Console.cs" />
     <Compile Include="Assets\Scripts\AudioController.cs" />
     <Compile Include="Assets\Scripts\DrumsSound\CrashSound.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="Assets\Oculus\Spatializer\scripts\ONSPAudioSource.cs" />
     <Compile Include="Assets\Scripts\SelectStage.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\MoveHiHat.cs" />
     <Compile Include="Assets\Oculus\Spatializer\scripts\ONSPProfiler.cs" />
     <Compile Include="Assets\Scripts\DrumChoice.cs" />
     <Compile Include="Assets\Oculus\Spatializer\scripts\ONSPPropagationInterface.cs" />
@@ -93,6 +95,7 @@
     <Compile Include="Assets\Oculus\Spatializer\scripts\ONSPAmbisonicsNative.cs" />
     <Compile Include="Assets\Oculus\Spatializer\scenes\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Scripts\DrumsSound\KickDrumSound.cs" />
+    <Compile Include="Assets\Scripts\Reader.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\SoundFXRef.cs" />
     <Compile Include="Assets\Scripts\ChangeScenes\SetModifyStage.cs" />
     <Compile Include="Assets\Scripts\DrumsSound\GoliathSound.cs" />
@@ -113,10 +116,17 @@
     <Compile Include="Assets\Scripts\MoveInstruments\DragObject.cs" />
     <Compile Include="Assets\Scripts\MeasureLatency.cs" />
     <Compile Include="Assets\Scripts\PlaneTriggers\PlaneTwo.cs" />
-    <Compile Include="Assets\Scripts\MoveHiHat.cs" />
   </ItemGroup>
   <ItemGroup>
+     <None Include="Assets\StreamingAssets\savedata.txt" />
+     <None Include="Assets\JsonDotNet\link.xml" />
+     <None Include="Assets\JsonDotNet\Assemblies\Windows\Newtonsoft.Json.XML" />
+     <None Include="Assets\JsonDotNet\Assemblies\Standalone\Newtonsoft.Json.XML" />
+     <None Include="Assets\JsonDotNet\Assemblies\Standalone\Newtonsoft.Json.dll" />
      <None Include="Assets\Oculus\Spatializer\Plugins\x86\AudioPluginOculusSpatializer.dll" />
+     <None Include="Assets\JsonDotNet\Assemblies\AOT\Newtonsoft.Json.dll" />
+     <None Include="Assets\JsonDotNet\Assemblies\AOT\Newtonsoft.Json.XML" />
+     <None Include="Assets\JsonDotNet\Assemblies\Windows\Newtonsoft.Json.dll" />
      <None Include="Assets\Oculus\Spatializer\Plugins\x86_64\AudioPluginOculusSpatializer.dll" />
     <Reference Include="UnityEngine">
       <HintPath>D:\UnityEditors\2020.1.13f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
@@ -297,6 +307,9 @@
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>D:\UnityEditors\2020.1.13f1\Editor\Data\Managed\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Assets\JsonDotNet\Assemblies\Standalone\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>D:\UnityEditors\2020.1.13f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\mscorlib.dll</HintPath>
@@ -673,9 +686,6 @@
     <Reference Include="Unity.XR.Oculus.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.XR.Oculus.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
     </Reference>
@@ -703,11 +713,16 @@
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
       <HintPath>Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{CE17B422-4A8B-E35A-2782-5095C172C7EB}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.UI.csproj">
+      <Project>{951EDCEE-D478-195B-374D-5DF225203A90}</Project>
+      <Name>UnityEngine.UI</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.XR.Management.Samples.csproj">
       <Project>{DF74FC7A-ED70-288A-D20E-C66E7360DB85}</Project>
       <Name>Unity.XR.Management.Samples</Name>
@@ -715,6 +730,10 @@
     <ProjectReference Include="Unity.XR.Management.Samples.Editor.csproj">
       <Project>{EEF9D5FC-BDEE-C31E-3769-172EDFDEE24C}</Project>
       <Name>Unity.XR.Management.Samples.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.UI.csproj">
+      <Project>{50FFCA0E-5BE0-61F5-2BF3-8B734E50FBF0}</Project>
+      <Name>UnityEditor.UI</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

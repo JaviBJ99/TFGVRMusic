@@ -47,7 +47,7 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Unity/VSTU</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>4.8.2.0</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorVersion>4.10.3.0</UnityProjectGeneratorVersion>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>2019.3.12f1</UnityVersion>
@@ -68,12 +68,18 @@
     <Compile Include="Assets\Scripts\BackToMenu.cs" />
     <Compile Include="Assets\Scripts\ChangeCamera.cs" />
     <Compile Include="Assets\Scripts\CollisionDetect.cs" />
+    <Compile Include="Assets\Scripts\CreateJSON.cs" />
     <Compile Include="Assets\Scripts\CustomDrums.cs" />
     <Compile Include="Assets\Scripts\DragObject.cs" />
     <Compile Include="Assets\Scripts\DrumChoice.cs" />
+    <Compile Include="Assets\Scripts\InstrumentList.cs" />
     <Compile Include="Assets\Scripts\Positions.cs" />
     <Compile Include="Assets\Scripts\SelectObjectToCreate.cs" />
     <Compile Include="Assets\Scripts\SetCustomDrums.cs" />
+    <Compile Include="Assets\pos.cs" />
+    <None Include="Assets\Text\savedata.txt" />
+    <None Include="Assets\JsonDotNet\link.xml" />
+    <None Include="Assets\savedate.txt" />
     <Reference Include="UnityEngine">
       <HintPath>D:/UnityEditors/2019.3.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -256,6 +262,9 @@
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>D:/UnityEditors/2019.3.12f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>D:/TFGGitHub/TFGVRMusic/DrumsConfiguration/DrumsConfig/Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>D:/UnityEditors/2019.3.12f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -611,9 +620,6 @@
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/TFGGitHub/TFGVRMusic/DrumsConfiguration/DrumsConfig/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>D:/TFGGitHub/TFGVRMusic/DrumsConfiguration/DrumsConfig/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>D:/TFGGitHub/TFGVRMusic/DrumsConfiguration/DrumsConfig/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
@@ -626,11 +632,19 @@
     <Reference Include="Unity.TextMeshPro">
       <HintPath>D:/TFGGitHub/TFGVRMusic/DrumsConfiguration/DrumsConfig/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>D:/TFGGitHub/TFGVRMusic/DrumsConfiguration/DrumsConfig/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
   </ItemGroup>
-  <ItemGroup></ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="UnityEngine.UI.csproj">
+      <Project>{29EE095F-4BE6-8AFF-C61B-2FE3D0D76568}</Project>
+      <Name>UnityEngine.UI</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.UI.csproj">
+      <Project>{14B9CECA-BD74-CEF2-B643-9E2052E28A1F}</Project>
+      <Name>UnityEditor.UI</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
