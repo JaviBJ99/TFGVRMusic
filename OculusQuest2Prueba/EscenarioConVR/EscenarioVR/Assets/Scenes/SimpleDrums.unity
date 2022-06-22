@@ -690,6 +690,9 @@ MonoBehaviour:
   instrument: {fileID: 8296172669375926495}
   sound: {fileID: 8300000, guid: 708be811e8593504cb3a64ac9836fc1d, type: 3}
   plane1: {fileID: 1887525959}
+  managerMIDI: {fileID: 0}
+  midioptions: {fileID: 0}
+  nota: 
   texto: {fileID: 0}
   bufferLength: 0
   numBuffers: 0
@@ -1507,6 +1510,52 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &685516887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 685516889}
+  - component: {fileID: 685516888}
+  m_Layer: 0
+  m_Name: MidiOptions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &685516888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685516887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0c9cf2f1d4bb6b40828ea7cad13084e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  channel: 0
+  Mmode: 0
+  Pmode: 0
+--- !u!4 &685516889
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685516887}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.589537, y: 3.6448183, z: 5.0054045}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &721658339
 GameObject:
   m_ObjectHideFlags: 0
@@ -2140,11 +2189,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   watcher: {fileID: 0}
-  IsPressed: 0
   hihat: {fileID: 0}
   top: {fileID: 0}
   opensound: {fileID: 0}
   closesound: {fileID: 0}
+  managerMIDI: {fileID: 0}
+  closeHH: 390000007800000001000000
+  openHH: 3b0000007800000001000000
+  sender: {fileID: 0}
   plane1: {fileID: 0}
 --- !u!1 &973082412
 GameObject:
@@ -2936,6 +2988,9 @@ MonoBehaviour:
   instrument: {fileID: 8296172667665953721}
   sound: {fileID: 8300000, guid: 6f14f1181ee6e804687eb8060ba9b563, type: 3}
   plane1: {fileID: 1646114056}
+  managerMIDI: {fileID: 0}
+  midioptions: {fileID: 0}
+  nota: 
   texto: {fileID: 0}
   bufferLength: 0
   numBuffers: 0
@@ -3049,11 +3104,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   watcher: {fileID: 352045533}
-  IsPressed: 0
   hihat: {fileID: 249518415}
   top: {fileID: 0}
   opensound: {fileID: 8300000, guid: e71e7dd54cb3f504fb5c1e97f320f113, type: 3}
   closesound: {fileID: 8300000, guid: c3966f0e3804fdd46b2cd2d9bbef22e2, type: 3}
+  managerMIDI: {fileID: 0}
+  closeHH: 390000007800000001000000
+  openHH: 3b0000007800000001000000
+  sender: {fileID: 0}
   plane1: {fileID: 1617649572}
 --- !u!64 &1230942967
 MeshCollider:
@@ -3167,6 +3225,9 @@ MonoBehaviour:
   instrument: {fileID: 8296172668277175880}
   sound: {fileID: 8300000, guid: 6a751c1d0f11d334288ac85bdc9abde9, type: 3}
   plane1: {fileID: 731644188}
+  managerMIDI: {fileID: 0}
+  midioptions: {fileID: 0}
+  nota: 
   texto: {fileID: 0}
   bufferLength: 0
   numBuffers: 0
@@ -3279,6 +3340,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ride: {fileID: 8296172668277175880}
   bsound: {fileID: 8300000, guid: 4a0893d90723faa458116006fe39222f, type: 3}
+  managerMIDI: {fileID: 0}
+  nota: 3e0000007800000001000000
 --- !u!135 &1320147305
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3341,6 +3404,9 @@ MonoBehaviour:
   instrument: {fileID: 8296172668637203487}
   sound: {fileID: 8300000, guid: 424c9e7f09705d644a1a39275d2c6796, type: 3}
   plane1: {fileID: 58778617}
+  managerMIDI: {fileID: 0}
+  midioptions: {fileID: 0}
+  nota: 
   texto: {fileID: 0}
   bufferLength: 0
   numBuffers: 0
@@ -10293,11 +10359,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   watcher: {fileID: 352045533}
-  IsPressed: 0
   hihat: {fileID: 4947319198194014337}
   top: {fileID: 4947319198194014337}
   opensound: {fileID: 8300000, guid: e71e7dd54cb3f504fb5c1e97f320f113, type: 3}
   closesound: {fileID: 8300000, guid: c3966f0e3804fdd46b2cd2d9bbef22e2, type: 3}
+  managerMIDI: {fileID: 0}
+  closeHH: 390000007800000001000000
+  openHH: 3b0000007800000001000000
+  sender: {fileID: 0}
   plane1: {fileID: 4947319197683621482}
 --- !u!64 &4947319197027988281
 MeshCollider:
@@ -11132,6 +11201,7 @@ MonoBehaviour:
   pedal: {fileID: 4276995189820505443}
   maza: {fileID: 4276995188237384178}
   ksound: {fileID: 8300000, guid: 388bf8419b719224a8f0b13c5fdcbbfe, type: 3}
+  sender: {fileID: 0}
 --- !u!164 &4952399045268727802
 AudioReverbFilter:
   m_ObjectHideFlags: 0
@@ -15320,6 +15390,7 @@ MonoBehaviour:
   pedal: {fileID: 0}
   maza: {fileID: 0}
   ksound: {fileID: 8300000, guid: 388bf8419b719224a8f0b13c5fdcbbfe, type: 3}
+  sender: {fileID: 0}
 --- !u!164 &8296172667524862062
 AudioReverbFilter:
   m_ObjectHideFlags: 0

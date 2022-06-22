@@ -11,7 +11,7 @@ public class manager : MonoBehaviour
 
     public string datafromnode;
 
-    public int[] midiOn = { 52, 120, 1 };
+    public int[] midiOn = { 52, 120, 10 };
 
     public int[] midiOff = { 52, 0, 1 };
 
@@ -25,8 +25,8 @@ public class manager : MonoBehaviour
         //192.168.43.20
 
 
-        //sender.init("192.168.1.67", Remoteport, 25666);
-        sender.init("172.20.10.5", Remoteport, 25666);
+        sender.init("192.168.1.67", Remoteport, 25666);
+        //sender.init("172.20.10.5", Remoteport, 25666);
 
 
         //sender.sendString("Hello from Start. " + Time.realtimeSinceStartup);
