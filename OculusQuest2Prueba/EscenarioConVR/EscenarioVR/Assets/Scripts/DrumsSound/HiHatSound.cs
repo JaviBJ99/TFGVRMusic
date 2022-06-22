@@ -14,6 +14,14 @@ public class HiHatSound : MonoBehaviour
 
     public AudioClip opensound, closesound;
 
+    public manager managerMIDI;
+    public int[] closeHH = { 57, 120, 1 };
+    public int[] openHH = { 59, 120, 1 };
+
+    public UDPSend sender = new UDPSend();
+
+    string signal;
+
     bool open = false;
 
     float TimeHit2;
@@ -30,6 +38,8 @@ public class HiHatSound : MonoBehaviour
         move = top.GetComponent<Animation>();
 
     }
+
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -56,11 +66,12 @@ public class HiHatSound : MonoBehaviour
                 if (open)
                 {
                     AudioHihat.PlayOneShot(opensound);
-
+                    managerMIDI.sendMIDI(openHH);
                 }
                 else
                 {
                     AudioHihat.PlayOneShot(closesound);
+                    managerMIDI.sendMIDI(closeHH);
                 }
 
             }
@@ -93,6 +104,24 @@ public class HiHatSound : MonoBehaviour
             open = !open;
             
         }
+
+    }
+
+    public void hihatpedal()
+    {
+
+        if (open)
+        {
+            AudioHihat.Stop();
+            move.Play("Close");
+            AudioHihat.PlayOneShot(closesound);
+        }
+        else
+        {
+            move.Play("Open");
+            AudioHihat.PlayOneShot(opensound);
+        }
+        open = !open; 
 
     }
 

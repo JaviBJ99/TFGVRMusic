@@ -10,6 +10,8 @@ public class RideBellSound : MonoBehaviour
     public GameObject ride;
     AudioSource AudioBell;
     public AudioClip bsound;
+    public manager managerMIDI;
+    public int[] nota = {62,120,1};
 
 
     void Start()
@@ -26,6 +28,7 @@ public class RideBellSound : MonoBehaviour
         if (other.gameObject.tag == "SoundTag")
         {
             AudioBell.PlayOneShot(bsound);
+            managerMIDI.sendMIDI(nota);
         }
 
     }

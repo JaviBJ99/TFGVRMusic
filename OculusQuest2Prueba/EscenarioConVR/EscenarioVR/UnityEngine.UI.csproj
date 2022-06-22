@@ -56,6 +56,8 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="D:\UnityEditors\2020.1.13f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\Button.cs" />
+    <Compile Include="D:\UnityEditors\2020.1.13f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\Slider.cs" />
     <Compile Include="D:\UnityEditors\2020.1.13f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\Layout\CanvasScaler.cs" />
     <Compile Include="D:\UnityEditors\2020.1.13f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\IMaskable.cs" />
     <Compile Include="D:\UnityEditors\2020.1.13f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\Utility\VertexHelper.cs" />
@@ -101,7 +103,6 @@
     <Compile Include="D:\UnityEditors\2020.1.13f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\MaskUtilities.cs" />
     <Compile Include="D:\UnityEditors\2020.1.13f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\ScrollRect.cs" />
     <Compile Include="D:\UnityEditors\2020.1.13f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\StencilMaterial.cs" />
-    <Compile Include="D:\UnityEditors\2020.1.13f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\Button.cs" />
     <Compile Include="D:\UnityEditors\2020.1.13f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\Layout\LayoutRebuilder.cs" />
     <Compile Include="D:\UnityEditors\2020.1.13f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\RawImage.cs" />
     <Compile Include="D:\UnityEditors\2020.1.13f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\SpriteState.cs" />
@@ -139,7 +140,6 @@
     <Compile Include="D:\UnityEditors\2020.1.13f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\EventSystem\InputModules\StandaloneInputModule.cs" />
     <Compile Include="D:\UnityEditors\2020.1.13f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\Toggle.cs" />
     <Compile Include="D:\UnityEditors\2020.1.13f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\SpecializedCollections\IndexedSet.cs" />
-    <Compile Include="D:\UnityEditors\2020.1.13f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\Slider.cs" />
     <Compile Include="D:\UnityEditors\2020.1.13f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\ToggleGroup.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -14,6 +14,7 @@ TagManager:
   - Crash2
   - Crash3
   - Ride
+  - RideBell
   layers:
   - Default
   - TransparentFX

@@ -116,6 +116,8 @@
     <Compile Include="Assets\Scripts\MoveInstruments\DragObject.cs" />
     <Compile Include="Assets\Scripts\MeasureLatency.cs" />
     <Compile Include="Assets\Scripts\PlaneTriggers\PlaneTwo.cs" />
+    <Compile Include="Assets\Scripts\UDPSend.cs" />
+    <Compile Include="Assets\Scripts\manager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\StreamingAssets\savedata.txt" />

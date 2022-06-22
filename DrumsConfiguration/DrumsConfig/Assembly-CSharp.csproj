@@ -79,7 +79,6 @@
     <Compile Include="Assets\pos.cs" />
     <None Include="Assets\Text\savedata.txt" />
     <None Include="Assets\JsonDotNet\link.xml" />
-    <None Include="Assets\savedate.txt" />
     <Reference Include="UnityEngine">
       <HintPath>D:/UnityEditors/2019.3.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

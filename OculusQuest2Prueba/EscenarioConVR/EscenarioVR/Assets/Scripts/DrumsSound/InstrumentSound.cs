@@ -11,7 +11,12 @@ public class InstrumentSound : MonoBehaviour
     AudioSource AudioInstrument;
     public AudioClip sound;
     public PlaneOne plane1;
- 
+    public manager managerMIDI;
+
+    public int[] nota = {};
+
+    string insTag;
+
 
     float TimeHit2, t, db, v, e;
 
@@ -29,8 +34,8 @@ public class InstrumentSound : MonoBehaviour
     {
 
         AudioInstrument = instrument.GetComponent<AudioSource>();
-
-     
+        insTag = instrument.gameObject.tag;
+        nota = selectNote(insTag);     
     }
 
 
@@ -57,6 +62,7 @@ public class InstrumentSound : MonoBehaviour
 
                 AudioInstrument.volume = db;
                 AudioInstrument.PlayOneShot(sound);
+                managerMIDI.sendMIDI(nota);
                 
             
             }
@@ -68,6 +74,35 @@ public class InstrumentSound : MonoBehaviour
 
         }
 
+    }
+
+    private int[] selectNote(string tag)
+    {
+        int[] notaMIDI = {};
+        int[] notaGOLIATH1 = {41,120,1};
+        int[] notaTOM1 = { 42, 120, 1 }; 
+        int[] notaRIDE = { 63, 120, 1 };
+
+
+
+
+        switch (tag)
+        {
+            case "Goliath1":
+                notaMIDI = notaGOLIATH1;
+                break;
+
+            case "Tom1":
+                notaMIDI = notaTOM1;
+                break;
+
+            case "Ride":
+                notaMIDI = notaRIDE;
+                break;
+        }
+
+        
+        return notaMIDI;
     }
    
 }

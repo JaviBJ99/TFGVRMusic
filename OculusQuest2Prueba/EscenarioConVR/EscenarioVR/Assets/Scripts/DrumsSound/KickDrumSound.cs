@@ -12,18 +12,25 @@ public class KickDrumSound : MonoBehaviour
     public AudioClip ksound;
     private Animation m, p;
 
+    public UDPSend sender = new UDPSend();
+
+    string signal;
+
 
 
     void Start()
     {
         watcher.primaryButtonPress.AddListener(onPrimaryButtonEvent);
         AudioKick = kick.GetComponent<AudioSource>();
-        m = maza.GetComponent<Animation>();
+        m = maza.GetComponent<Animation>(); 
         p = pedal.GetComponent<Animation>();
 
       
 
     }
+
+
+
 
     public void onPrimaryButtonEvent(bool pressed)
     {
@@ -34,6 +41,14 @@ public class KickDrumSound : MonoBehaviour
             p.Play();
         }
            
+    }
+
+    public void kickpedal()
+    {
+        AudioKick.PlayOneShot(ksound);
+        m.Play();
+        p.Play();
+
     }
 
     
