@@ -12,7 +12,7 @@ public class InstrumentSound : MonoBehaviour
     public AudioClip sound;
     public PlaneOne plane1;
     public manager managerMIDI;
-    public CheckMIDIOptions midioptions;
+   // public CheckMIDIOptions midioptions;
 
     public int[] nota = {};
 
@@ -39,11 +39,18 @@ public class InstrumentSound : MonoBehaviour
 
         AudioInstrument = instrument.GetComponent<AudioSource>();
         insTag = instrument.gameObject.tag;
-        channel = midioptions.channel;
-        midiMode = midioptions.Mmode;
-        pedalMode = midioptions.Pmode;
+
+        //channel = midioptions.channel;
+        //midiMode = midioptions.Mmode;
+        //pedalMode = midioptions.Pmode;
+
+        channel = MIDIOptions.MIDIChannel;
+        midiMode = MIDIOptions.MIDIMode;
+        pedalMode = MIDIOptions.PedalsMode;
+
         if (midiMode)
         {
+            Debug.Log("ESTOY AQUI");
             nota = selectNote(insTag,channel);
         }
         
@@ -54,6 +61,14 @@ public class InstrumentSound : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
+        //Prueba
+        Debug.Log("Canal " + channel);
+        Debug.Log("MIDI " + midiMode);
+        Debug.Log("PEDALES " + pedalMode);
+        //
+
+
         if (plane1.timeHit1 != 0 && other.gameObject.tag == "SoundTag")
         {
             TimeHit2 = Time.time;
@@ -76,6 +91,7 @@ public class InstrumentSound : MonoBehaviour
 
                 if (midiMode)
                 {
+                    Debug.Log("HEY");
                     managerMIDI.sendMIDI(nota);
                 }
                

@@ -691,6 +691,7 @@ MonoBehaviour:
   sound: {fileID: 8300000, guid: 708be811e8593504cb3a64ac9836fc1d, type: 3}
   plane1: {fileID: 1887525959}
   managerMIDI: {fileID: 1947330088}
+  midioptions: {fileID: 1447143967}
   nota: 
   texto: {fileID: 0}
   bufferLength: 0
@@ -2942,6 +2943,7 @@ MonoBehaviour:
   sound: {fileID: 8300000, guid: 6f14f1181ee6e804687eb8060ba9b563, type: 3}
   plane1: {fileID: 1646114056}
   managerMIDI: {fileID: 0}
+  midioptions: {fileID: 0}
   nota: 
   texto: {fileID: 0}
   bufferLength: 0
@@ -3178,6 +3180,7 @@ MonoBehaviour:
   sound: {fileID: 8300000, guid: 6a751c1d0f11d334288ac85bdc9abde9, type: 3}
   plane1: {fileID: 731644188}
   managerMIDI: {fileID: 1947330088}
+  midioptions: {fileID: 0}
   nota: 
   texto: {fileID: 0}
   bufferLength: 0
@@ -3356,6 +3359,7 @@ MonoBehaviour:
   sound: {fileID: 8300000, guid: 424c9e7f09705d644a1a39275d2c6796, type: 3}
   plane1: {fileID: 58778617}
   managerMIDI: {fileID: 0}
+  midioptions: {fileID: 0}
   nota: 
   texto: {fileID: 0}
   bufferLength: 0
@@ -3472,6 +3476,52 @@ Transform:
   - {fileID: 1007061673}
   m_Father: {fileID: 0}
   m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1447143966
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1447143968}
+  - component: {fileID: 1447143967}
+  m_Layer: 0
+  m_Name: MIDIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1447143967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447143966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0c9cf2f1d4bb6b40828ea7cad13084e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  channel: 0
+  Mmode: 0
+  Pmode: 0
+--- !u!4 &1447143968
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447143966}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.2533598, y: 3.3629136, z: 0.8137233}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1450787978
 GameObject:

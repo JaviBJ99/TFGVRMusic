@@ -23,7 +23,23 @@ public class SelectMIDIOptions : MonoBehaviour
 
     public void SelectMIDIChannel(int c)
     {
-        MIDIOptions.MIDIChannel = c;
+        int n = 0;
+        switch (c)
+        {
+            case 0:
+                n = 10;
+                break;
+            case 1:
+                n = 16;
+                break;
+            case 2:
+                n = 20;
+                break;
+
+        }
+
+        Debug.Log(n);
+        MIDIOptions.MIDIChannel = n;
     }
 
     public void ActivatePedalsMode(bool p)

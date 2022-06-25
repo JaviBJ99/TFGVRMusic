@@ -2804,14 +2804,14 @@ MonoBehaviour:
       - m_Target: {fileID: 3223230689336843880}
         m_TargetAssemblyTypeName: SelectMIDIOptions, Assembly-CSharp
         m_MethodName: ActivatePedalsMode
-        m_Mode: 6
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 1
 --- !u!1 &1156154811
@@ -3492,14 +3492,14 @@ MonoBehaviour:
       - m_Target: {fileID: 3223230689336843880}
         m_TargetAssemblyTypeName: SelectMIDIOptions, Assembly-CSharp
         m_MethodName: ActivateMIDIMode
-        m_Mode: 6
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 1
 --- !u!1 &1565547601
@@ -3983,18 +3983,18 @@ MonoBehaviour:
   m_Options:
     m_Options:
     - m_Text: 10
-      m_Image: {fileID: 0}
+      m_Image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
     - m_Text: 16
-      m_Image: {fileID: 0}
+      m_Image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
     - m_Text: 20
-      m_Image: {fileID: 0}
+      m_Image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 3223230689336843880}
         m_TargetAssemblyTypeName: SelectMIDIOptions, Assembly-CSharp
         m_MethodName: SelectMIDIChannel
-        m_Mode: 3
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
