@@ -552,6 +552,55 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5731547941117289742, guid: b6ef940ec11658948b7cafc97d4d551d, type: 3}
+--- !u!1 &272594027
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 272594029}
+  - component: {fileID: 272594028}
+  m_Layer: 0
+  m_Name: UDPSender
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &272594028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272594027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c132392a3d6b72546810c63820aa0c16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kick: {fileID: 2136053711}
+  hihat: {fileID: 2100107149}
+  port: 25666
+  lastReceivedUDPPacket: 
+  allReceivedUDPPackets: 
+  newdatahereboys: 0
+--- !u!4 &272594029
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272594027}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.19750138, y: -1.482585, z: 8.080218}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &303354057
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,6 +650,8 @@ MonoBehaviour:
   instrument: {fileID: 8296172669375926495}
   sound: {fileID: 8300000, guid: 708be811e8593504cb3a64ac9836fc1d, type: 3}
   plane1: {fileID: 1887525959}
+  managerMIDI: {fileID: 916243158}
+  nota: 
   texto: {fileID: 0}
   bufferLength: 0
   numBuffers: 0
@@ -2173,6 +2224,55 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -109517962708253532, guid: 97056206b0044e2449609ccee74ea353, type: 3}
+--- !u!1 &916243157
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 916243159}
+  - component: {fileID: 916243158}
+  m_Layer: 0
+  m_Name: ManagerUDP
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &916243158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916243157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3533f21c70dfd2940b0fec1e4b47cde0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Remoteport: 25666
+  sender: {fileID: 272594028}
+  datafromnode: 
+  midiOn: 34000000780000000a000000
+  midiOff: 340000000000000001000000
+  midibyte: 347801
+--- !u!4 &916243159
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916243157}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.19750138, y: -1.482585, z: 8.080218}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &969231209
 GameObject:
   m_ObjectHideFlags: 0
@@ -2419,6 +2519,10 @@ MonoBehaviour:
   hoop: {fileID: 8300000, guid: 13353c88d388354409a430e4b85001e5, type: 3}
   rimshot: {fileID: 8300000, guid: 76224acb2d865f145ad1aee19ae5bcfa, type: 3}
   plane1: {fileID: 0}
+  managerMIDI: {fileID: 0}
+  snareMIDI: 260000007800000010000000
+  rimshotMIDI: 3e0000007800000010000000
+  hoopMIDI: 250000007800000010000000
 --- !u!4 &1016089467 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5542792111326498637, guid: fbd60145660a06449a97a3b8ecd37e4c, type: 3}
@@ -2477,6 +2581,10 @@ MonoBehaviour:
   hoop: {fileID: 8300000, guid: 13353c88d388354409a430e4b85001e5, type: 3}
   rimshot: {fileID: 8300000, guid: 76224acb2d865f145ad1aee19ae5bcfa, type: 3}
   plane1: {fileID: 973082414}
+  managerMIDI: {fileID: 916243158}
+  snareMIDI: 260000007800000010000000
+  rimshotMIDI: 3e0000007800000010000000
+  hoopMIDI: 250000007800000010000000
 --- !u!64 &1034281192
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3058,7 +3166,7 @@ GameObject:
   - component: {fileID: 1229380535}
   m_Layer: 0
   m_Name: CrashCollider
-  m_TagString: Untagged
+  m_TagString: Crash1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3092,6 +3200,8 @@ MonoBehaviour:
   instrument: {fileID: 8296172667665953721}
   sound: {fileID: 8300000, guid: 6f14f1181ee6e804687eb8060ba9b563, type: 3}
   plane1: {fileID: 1646114056}
+  managerMIDI: {fileID: 916243158}
+  nota: 
   texto: {fileID: 0}
   bufferLength: 0
   numBuffers: 0
@@ -3207,6 +3317,8 @@ MonoBehaviour:
   instrument: {fileID: 8296172668277175880}
   sound: {fileID: 8300000, guid: 6a751c1d0f11d334288ac85bdc9abde9, type: 3}
   plane1: {fileID: 731644188}
+  managerMIDI: {fileID: 916243158}
+  nota: 
   texto: {fileID: 0}
   bufferLength: 0
   numBuffers: 0
@@ -3319,6 +3431,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ride: {fileID: 8296172668277175880}
   bsound: {fileID: 8300000, guid: 4a0893d90723faa458116006fe39222f, type: 3}
+  managerMIDI: {fileID: 0}
+  nota: 3e0000007800000001000000
 --- !u!135 &1320147305
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3475,6 +3589,8 @@ MonoBehaviour:
   instrument: {fileID: 8296172668637203487}
   sound: {fileID: 8300000, guid: 424c9e7f09705d644a1a39275d2c6796, type: 3}
   plane1: {fileID: 58778617}
+  managerMIDI: {fileID: 916243158}
+  nota: 
   texto: {fileID: 0}
   bufferLength: 0
   numBuffers: 0
@@ -5141,6 +5257,28 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 5542792111326498638, guid: fbd60145660a06449a97a3b8ecd37e4c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fbd60145660a06449a97a3b8ecd37e4c, type: 3}
+--- !u!114 &2100107149 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4947319198191126355, guid: a3d205ed33979604481c98d20eb7e2bf, type: 3}
+  m_PrefabInstance: {fileID: 4947319197273798053}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f682fd3c072174c842dcf7ccb3d420, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2136053711 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4952399045719842447, guid: 5bccdd0c12ca32a438b22b73349fc6e0, type: 3}
+  m_PrefabInstance: {fileID: 4006965238044987106}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bd477a234e6354d90834225d1631d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &1615354076503849445
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5513,9 +5651,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 127112075}
     - target: {fileID: 4947319198191126355, guid: a3d205ed33979604481c98d20eb7e2bf, type: 3}
+      propertyPath: sender
+      value: 
+      objectReference: {fileID: 272594028}
+    - target: {fileID: 4947319198191126355, guid: a3d205ed33979604481c98d20eb7e2bf, type: 3}
       propertyPath: watcher
       value: 
       objectReference: {fileID: 352045533}
+    - target: {fileID: 4947319198191126355, guid: a3d205ed33979604481c98d20eb7e2bf, type: 3}
+      propertyPath: managerMIDI
+      value: 
+      objectReference: {fileID: 916243158}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3d205ed33979604481c98d20eb7e2bf, type: 3}
 --- !u!4 &5006512735163392716
@@ -6210,7 +6356,7 @@ GameObject:
   - component: {fileID: 8296172667665953724}
   m_Layer: 0
   m_Name: crash
-  m_TagString: Untagged
+  m_TagString: Crash1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6421,7 +6567,7 @@ GameObject:
   - component: {fileID: 8296172668277175884}
   m_Layer: 0
   m_Name: ride
-  m_TagString: Untagged
+  m_TagString: Ride
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6596,7 +6742,7 @@ GameObject:
   - component: {fileID: 8296172668637203490}
   m_Layer: 0
   m_Name: tom
-  m_TagString: Untagged
+  m_TagString: Tom2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6982,7 +7128,7 @@ GameObject:
   - component: {fileID: 8296172669375926498}
   m_Layer: 0
   m_Name: goliath
-  m_TagString: Untagged
+  m_TagString: Goliath1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

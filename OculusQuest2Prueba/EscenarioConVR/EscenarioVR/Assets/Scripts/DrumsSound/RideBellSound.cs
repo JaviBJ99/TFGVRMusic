@@ -11,7 +11,7 @@ public class RideBellSound : MonoBehaviour
     AudioSource AudioBell;
     public AudioClip bsound;
     public manager managerMIDI;
-    public int[] nota = {62,120,1};
+    public int[] nota = {53,120,16};
 
 
     void Start()

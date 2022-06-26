@@ -61,13 +61,13 @@ public class manager : MonoBehaviour
         sender.ClosePorts();
     }
 
-    public void sendMIDI(int [] nota)
+    public void sendMIDI(int[] notamidi)
     {
 
         //sender.init("192.168.1.67", Remoteport, 25666);
 
-        sender.sendInt32Array(nota);
-      
+        sender.sendInt32Array(notamidi);
+        Debug.Log("se va a enviar un midi");
 
         Application.targetFrameRate = 60;
 

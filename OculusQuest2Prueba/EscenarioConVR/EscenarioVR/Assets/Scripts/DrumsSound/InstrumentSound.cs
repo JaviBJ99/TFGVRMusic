@@ -21,6 +21,8 @@ public class InstrumentSound : MonoBehaviour
 
     float TimeHit2, t, db, v, e;
 
+    float volMIDI;
+
     public Text texto;
 
     public int bufferLength, numBuffers;
@@ -31,6 +33,7 @@ public class InstrumentSound : MonoBehaviour
     float totalHits = 0;
     float totalv = 0;
     float average = 0;
+
 
     Vector3 distance;
 
@@ -50,10 +53,12 @@ public class InstrumentSound : MonoBehaviour
 
         if (midiMode)
         {
-            Debug.Log("ESTOY AQUI");
+      
             nota = selectNote(insTag,channel);
+            
+
         }
-        
+
     }
 
 
@@ -61,12 +66,6 @@ public class InstrumentSound : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
-        //Prueba
-        Debug.Log("Canal " + channel);
-        Debug.Log("MIDI " + midiMode);
-        Debug.Log("PEDALES " + pedalMode);
-        //
 
 
         if (plane1.timeHit1 != 0 && other.gameObject.tag == "SoundTag")
@@ -86,12 +85,19 @@ public class InstrumentSound : MonoBehaviour
                 db = -20.0f * Mathf.Log10(t);
                 db = db / 20.0f;
 
+
+
+                volMIDI = (db * 127.0f);
+                Debug.Log("VOLUMEN MIDI" + (int)volMIDI);
+                nota[1] = (int)volMIDI;
+      
                 AudioInstrument.volume = db;
                 AudioInstrument.PlayOneShot(sound);
 
+                
+
                 if (midiMode)
                 {
-                    Debug.Log("HEY");
                     managerMIDI.sendMIDI(nota);
                 }
                
@@ -111,11 +117,15 @@ public class InstrumentSound : MonoBehaviour
     private int[] selectNote(string tag, int c)
     {
         int[] notaMIDI = {};
-        int[] notaGOLIATH1 = {41,120,c};
-        int[] notaTOM1 = { 42, 120, c }; 
-        int[] notaRIDE = { 63, 120, c};
-
-
+        int[] notaGOLIATH1 = {43,120,c};
+        int[] notaGOLIATH2 = { 41, 120, c };
+        int[] notaTOM1 = { 50, 120, c };
+        int[] notaTOM2 = { 48, 120, c };
+        int[] notaTOM3 = { 45, 120, c };
+        int[] notaRIDE = { 51, 120, c};
+        int[] notaCRASH1 = { 49, 120, c };
+        int[] notaCRASH2 = { 57, 120, c };
+        int[] notaCRASH3 = { 51, 120, c };
 
 
         switch (tag)
@@ -123,13 +133,29 @@ public class InstrumentSound : MonoBehaviour
             case "Goliath1":
                 notaMIDI = notaGOLIATH1;
                 break;
-
+            case "Goliath2":
+                notaMIDI = notaGOLIATH2;
+                break;
             case "Tom1":
                 notaMIDI = notaTOM1;
                 break;
-
+            case "Tom2":
+                notaMIDI = notaTOM2;
+                break;
+            case "Tom3":
+                notaMIDI = notaTOM3;
+                break;
             case "Ride":
                 notaMIDI = notaRIDE;
+                break;
+            case "Crash1":
+                notaMIDI = notaCRASH2;
+                break;
+            case "Crash2":
+                notaMIDI = notaCRASH2;
+                break;
+            case "Crash3":
+                notaMIDI = notaCRASH3;
                 break;
         }
 

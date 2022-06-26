@@ -15,8 +15,8 @@ public class HiHatSound : MonoBehaviour
     public AudioClip opensound, closesound;
 
     public manager managerMIDI;
-    public int[] closeHH = { 57, 120, 1 };
-    public int[] openHH = { 59, 120, 1 };
+    public int[] closeHH = { 57, 120, 16 };
+    public int[] openHH = { 59, 120, 16 };
 
     public UDPSend sender = new UDPSend();
 
@@ -29,6 +29,9 @@ public class HiHatSound : MonoBehaviour
     public PlaneOne plane1;
 
     float t, db;
+
+
+    float volMIDI;
 
 
     void Start()
@@ -62,14 +65,19 @@ public class HiHatSound : MonoBehaviour
 
                 AudioHihat.volume = db;
 
+                volMIDI = (db * 127.0f);
+
+
 
                 if (open)
                 {
+                    openHH[1] = (int)volMIDI;
                     AudioHihat.PlayOneShot(opensound);
                     managerMIDI.sendMIDI(openHH);
                 }
                 else
                 {
+                    closeHH[1] = (int)volMIDI;
                     AudioHihat.PlayOneShot(closesound);
                     managerMIDI.sendMIDI(closeHH);
                 }

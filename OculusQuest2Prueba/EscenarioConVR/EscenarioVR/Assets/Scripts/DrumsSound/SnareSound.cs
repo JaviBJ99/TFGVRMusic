@@ -18,6 +18,15 @@ public class SnareSound : MonoBehaviour
     public PlaneOne plane1;
 
 
+    public manager managerMIDI;
+    public int[] snareMIDI = { 38, 120, 16 };
+    public int[] rimshotMIDI = { 62, 120, 16 };
+    public int[] hoopMIDI = { 37, 120, 16 };
+
+    float volMIDI;
+
+
+
     void Start()
     {
 
@@ -46,6 +55,11 @@ public class SnareSound : MonoBehaviour
                     db = -20.0f * Mathf.Log10(vol);
                     db = db / 20.0f;
 
+                    volMIDI = (db * 127.0f);
+
+                    rimshotMIDI[1] = (int)volMIDI;
+                    managerMIDI.sendMIDI(rimshotMIDI);
+
                     AudioSnare.PlayOneShot(rimshot);
                     TimeHitHoop = 0.0f;
                     TimeHitPad = 0.0f;
@@ -67,9 +81,18 @@ public class SnareSound : MonoBehaviour
                     db = -20.0f * Mathf.Log10(vol);
                     db = db / 20.0f;
 
+
+                    volMIDI = (db * 127.0f);
+
+                    snareMIDI[1] = (int)volMIDI;
+                    managerMIDI.sendMIDI(snareMIDI);
+
+
                     AudioSnare.PlayOneShot(stroke);
                     TimeHitHoop = 0.0f;
                     TimeHitPad = 0.0f;
+
+
                 }
             }
 
@@ -88,6 +111,12 @@ public class SnareSound : MonoBehaviour
 
                     db = -20.0f * Mathf.Log10(vol);
                     db = db / 20.0f;
+
+
+                    volMIDI = (db * 127.0f);
+
+                    hoopMIDI[1] = (int)volMIDI;
+                    managerMIDI.sendMIDI(hoopMIDI);
 
                     AudioSnare.PlayOneShot(hoop);
                     TimeHitHoop = 0.0f;
