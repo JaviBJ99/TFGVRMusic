@@ -12,8 +12,12 @@ public class InstrumentSound : MonoBehaviour
     public AudioClip sound;
     public PlaneOne plane1;
     public manager managerMIDI;
-   // public CheckMIDIOptions midioptions;
+    public Material materialPlano;
 
+    public CheckStickHit hitCollision;
+
+    public int hola;
+   // public CheckMIDIOptions midioptions;
     public int[] nota = {};
 
     string insTag;
@@ -34,6 +38,9 @@ public class InstrumentSound : MonoBehaviour
     float totalv = 0;
     float average = 0;
 
+    bool isColliding = false;
+    
+
 
     Vector3 distance;
 
@@ -42,11 +49,6 @@ public class InstrumentSound : MonoBehaviour
 
         AudioInstrument = instrument.GetComponent<AudioSource>();
         insTag = instrument.gameObject.tag;
-
-        //channel = midioptions.channel;
-        //midiMode = midioptions.Mmode;
-        //pedalMode = midioptions.Pmode;
-
         channel = MIDIOptions.MIDIChannel;
         midiMode = MIDIOptions.MIDIMode;
         pedalMode = MIDIOptions.PedalsMode;
@@ -67,9 +69,10 @@ public class InstrumentSound : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-
-        if (plane1.timeHit1 != 0 && other.gameObject.tag == "SoundTag")
+        if (plane1.timeHit1 != 0 && other.gameObject.tag == "SoundTag" && hitCollision.isCollision == false)
         {
+            
+            isColliding = true;
             TimeHit2 = Time.time;
 
             t = Mathf.Abs(TimeHit2 - plane1.timeHit1);
@@ -88,16 +91,15 @@ public class InstrumentSound : MonoBehaviour
 
 
                 volMIDI = (db * 127.0f);
-                Debug.Log("VOLUMEN MIDI" + (int)volMIDI);
-                nota[1] = (int)volMIDI;
+                //Debug.Log("VOLUMEN MIDI" + (int)volMIDI);
+               
       
                 AudioInstrument.volume = db;
                 AudioInstrument.PlayOneShot(sound);
 
-                
-
                 if (midiMode)
                 {
+                    nota[1] = (int)volMIDI;
                     managerMIDI.sendMIDI(nota);
                 }
                
@@ -108,10 +110,17 @@ public class InstrumentSound : MonoBehaviour
 
             TimeHit2 = 0;
             plane1.timeHit1 = 0;
+           
 
 
         }
 
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        isColliding = false;
+        
     }
 
     private int[] selectNote(string tag, int c)
@@ -122,8 +131,8 @@ public class InstrumentSound : MonoBehaviour
         int[] notaTOM1 = { 50, 120, c };
         int[] notaTOM2 = { 48, 120, c };
         int[] notaTOM3 = { 45, 120, c };
-        int[] notaRIDE = { 51, 120, c};
-        int[] notaCRASH1 = { 49, 120, c };
+        int[] notaRIDE = { 63, 120, c};
+        int[] notaCRASH1 = { 60, 120, c };
         int[] notaCRASH2 = { 57, 120, c };
         int[] notaCRASH3 = { 51, 120, c };
 
@@ -149,7 +158,7 @@ public class InstrumentSound : MonoBehaviour
                 notaMIDI = notaRIDE;
                 break;
             case "Crash1":
-                notaMIDI = notaCRASH2;
+                notaMIDI = notaCRASH1;
                 break;
             case "Crash2":
                 notaMIDI = notaCRASH2;

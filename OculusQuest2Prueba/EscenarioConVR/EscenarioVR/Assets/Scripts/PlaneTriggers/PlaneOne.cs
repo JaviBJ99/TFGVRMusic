@@ -6,10 +6,20 @@ public class PlaneOne : MonoBehaviour
 {
     public float timeHit1;
 
+    bool isColliding = false;
+
     private void OnTriggerEnter(Collider other)
     {
+        if (!isColliding)
+        {
+            timeHit1 = Time.time;
+            isColliding = true;
+        }
+       
 
-        timeHit1 = Time.time;
-
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        isColliding = false;
     }
 }

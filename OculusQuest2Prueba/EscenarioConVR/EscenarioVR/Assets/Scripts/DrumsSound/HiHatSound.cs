@@ -15,8 +15,8 @@ public class HiHatSound : MonoBehaviour
     public AudioClip opensound, closesound;
 
     public manager managerMIDI;
-    public int[] closeHH = { 57, 120, 16 };
-    public int[] openHH = { 59, 120, 16 };
+    public int[] closeHH = { 57, 120, 10 };
+    public int[] openHH = { 46, 120, 10};
 
     public UDPSend sender = new UDPSend();
 

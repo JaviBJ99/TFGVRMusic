@@ -66,6 +66,7 @@
     <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\SoundEmitter.cs" />
     <Compile Include="Assets\Scripts\DrumsSound\ReverbSelector.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\MinMaxAttribute.cs" />
+    <Compile Include="Assets\Scripts\MIDI\MIDIOptions.cs" />
     <Compile Include="Assets\Scripts\Creator.cs" />
     <Compile Include="Assets\Scripts\Console.cs" />
     <Compile Include="Assets\Scripts\AudioController.cs" />
@@ -116,11 +117,11 @@
     <Compile Include="Assets\Scripts\DrumsSound\RideBodySound.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scenes\Scripts\TestScript.cs" />
     <Compile Include="Assets\Scripts\MoveInstruments\DragObject.cs" />
+    <Compile Include="Assets\Scripts\MIDI\SelectMIDIOptions.cs" />
+    <Compile Include="Assets\Scripts\MIDI\CheckMIDIOptions.cs" />
     <Compile Include="Assets\Scripts\MeasureLatency.cs" />
     <Compile Include="Assets\Scripts\PlaneTriggers\PlaneTwo.cs" />
-    <Compile Include="Assets\Scripts\MIDI\CheckMIDIOptions.cs" />
-    <Compile Include="Assets\Scripts\MIDI\MIDIOptions.cs" />
-    <Compile Include="Assets\Scripts\MIDI\SelectMIDIOptions.cs" />
+    <Compile Include="Assets\Scripts\CheckStickHit.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\StreamingAssets\savedata.txt" />

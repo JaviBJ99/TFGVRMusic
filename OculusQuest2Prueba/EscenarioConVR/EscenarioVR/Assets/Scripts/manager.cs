@@ -20,32 +20,20 @@ public class manager : MonoBehaviour
     void Start()
     {
 
-
-        //0.0.0.0
-        //192.168.43.20
-
-
-        sender.init("192.168.1.67", Remoteport, 25666);
-        //sender.init("172.20.10.5", Remoteport, 25666);
+        //sender.init("192.168.1.67", Remoteport, 25666);
+        sender.init("172.20.10.5", Remoteport, 25666);
 
 
-        //sender.sendString("Hello from Start. " + Time.realtimeSinceStartup);
-        //sender.sendString("52");
-
-        sender.sendInt32Array(midiOn);
-        //sender.sendInt32(52);
-        //sender.sendInt32Array(midiOff);
 
         Application.targetFrameRate = 60;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyUp(KeyCode.Return))
             sender.sendString("This should be delivered");
 
-        if (sender.newdatahereboys)
+        if (sender.newdata)
         {
             datafromnode = sender.getLatestUDPPacket();
         }
@@ -64,13 +52,7 @@ public class manager : MonoBehaviour
     public void sendMIDI(int[] notamidi)
     {
 
-        //sender.init("192.168.1.67", Remoteport, 25666);
-
         sender.sendInt32Array(notamidi);
-        Debug.Log("se va a enviar un midi");
-
-        Application.targetFrameRate = 60;
-
 
     }
 

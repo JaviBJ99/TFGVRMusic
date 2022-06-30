@@ -15,6 +15,9 @@ TagManager:
   - Crash3
   - Ride
   - RideBell
+  - Drumstick1
+  - Drumstick2
+  - Drumstick
   layers:
   - Default
   - TransparentFX

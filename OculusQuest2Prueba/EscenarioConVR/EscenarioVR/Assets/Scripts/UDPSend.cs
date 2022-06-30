@@ -33,7 +33,7 @@ public class UDPSend: MonoBehaviour
     public string lastReceivedUDPPacket = "";
     public string allReceivedUDPPackets = ""; // Clean up this from time to time!
 
-    public bool newdatahereboys = false;
+    public bool newdata = false;
 
     public void init(string IPAdress, int RemotePort, int SourcePort = -1) // If sourceport is not set, its being chosen randomly by the system
     {
@@ -45,12 +45,12 @@ public class UDPSend: MonoBehaviour
         if (sourcePort <= -1)
         {
             client = new UdpClient();
-            Debug.Log("Sending to " + IP + ": " + remotePort);
+            //Debug.Log("Sending to " + IP + ": " + remotePort);
         }
         else
         {
             client = new UdpClient(sourcePort);
-            Debug.Log("Sending to " + IP + ": " + remotePort + " from Source Port: " + sourcePort);
+            //Debug.Log("Sending to " + IP + ": " + remotePort + " from Source Port: " + sourcePort);
         }
 
         receiveThread = new Thread(
@@ -62,24 +62,16 @@ public class UDPSend: MonoBehaviour
 
     private void ReceiveData()
     {
-        //client = sender.client;
         while (true)
         {
             try
             {
-                // Bytes empfangen.
                 IPEndPoint anyIP = new IPEndPoint(IPAddress.Any, 0);
                 byte[] data = client.Receive(ref anyIP);
 
-                // Bytes mit der UTF8-Kodierung in das Textformat kodieren.
                 string text = Encoding.UTF8.GetString(data);
 
-                // Den abgerufenen Text anzeigen.
-
-                Debug.Log(text);
-                
-
-                
+                              
                 if (text == "k")
                 {
                     kick.kickpedal();
@@ -91,14 +83,12 @@ public class UDPSend: MonoBehaviour
 
                 }
                 
-                newdatahereboys = true;
-                //PlayerPrefs.SetString("ReceivedData", text);
+                newdata = true;
 
-                // Latest UDPpacket
                 lastReceivedUDPPacket = text;
 
-                // ....
-                allReceivedUDPPackets = allReceivedUDPPackets + text;
+               
+               // allReceivedUDPPackets = allReceivedUDPPackets + text;
             }
             catch (Exception err)
             {
@@ -127,7 +117,7 @@ public class UDPSend: MonoBehaviour
         try
         {
             byte[] data = BitConverter.GetBytes(myInt);
-            Debug.Log("se van a copiar " + data.Length + " bytes");
+            //Debug.Log("se van a copiar " + data.Length + " bytes");
             client.Send(data, data.Length, remoteEndPoint);
         }
         catch (Exception err)
@@ -141,14 +131,12 @@ public class UDPSend: MonoBehaviour
         try
         {
             byte[] data = new byte[myInts.Length * sizeof(Int32)];
-            Debug.Log("se van a copiar " + data.Length + " bytes");
+   
             Buffer.BlockCopy(myInts, 0, data, 0, 4);
             Buffer.BlockCopy(myInts, 4, data, 1, 4);
             Buffer.BlockCopy(myInts, 8, data, 2, 4);
 
             client.Send(data, data.Length, remoteEndPoint);
-            //Debug.Log("se va a enviar el array: " + myInts[0] + "," + myInts[1] + "," + myInts[2]);
-            Debug.Log("se va a enviar el array: " + data[0] + "," + data[1] + "," + data[2] ) ;
 
         }
         catch (Exception err)
@@ -187,11 +175,6 @@ public class UDPSend: MonoBehaviour
         client.Close();
     }
 
-    public string getText()
-    {
-        Debug.Log("esto deberia salir " + textReceived);
-
-        return textReceived;
-    }
+ 
 
 }
