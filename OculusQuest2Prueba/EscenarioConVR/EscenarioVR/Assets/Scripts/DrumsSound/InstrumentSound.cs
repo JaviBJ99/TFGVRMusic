@@ -12,11 +12,10 @@ public class InstrumentSound : MonoBehaviour
     public AudioClip sound;
     public PlaneOne plane1;
     public manager managerMIDI;
-    public Material materialPlano;
+   // public Material materialPlano;
 
     public CheckStickHit hitCollision;
 
-    public int hola;
    // public CheckMIDIOptions midioptions;
     public int[] nota = {};
 
@@ -38,7 +37,7 @@ public class InstrumentSound : MonoBehaviour
     float totalv = 0;
     float average = 0;
 
-    bool isColliding = false;
+   
     
 
 
@@ -72,7 +71,6 @@ public class InstrumentSound : MonoBehaviour
         if (plane1.timeHit1 != 0 && other.gameObject.tag == "SoundTag" && hitCollision.isCollision == false)
         {
             
-            isColliding = true;
             TimeHit2 = Time.time;
 
             t = Mathf.Abs(TimeHit2 - plane1.timeHit1);
@@ -115,12 +113,6 @@ public class InstrumentSound : MonoBehaviour
 
         }
 
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        isColliding = false;
-        
     }
 
     private int[] selectNote(string tag, int c)

@@ -26,6 +26,9 @@ public class SnareSound : MonoBehaviour
     float volMIDI;
 
 
+    public CheckStickHit hitCollision;
+
+
 
     void Start()
     {
@@ -65,7 +68,7 @@ public class SnareSound : MonoBehaviour
                     TimeHitPad = 0.0f;
                 }
             }
-            else if (TimeHitPad > 0 && TimeHitHoop == 0)
+            else if (TimeHitPad > 0 && TimeHitHoop == 0 && hitCollision.isCollision == false)
             {
 
                 vol = Mathf.Abs(TimeHit2 - plane1.timeHit1);
@@ -96,7 +99,7 @@ public class SnareSound : MonoBehaviour
                 }
             }
 
-            else if (TimeHitPad == 0 && TimeHitHoop > 0)
+            else if (TimeHitPad == 0 && TimeHitHoop > 0 && hitCollision.isCollision == false)
             {
 
                 vol = Mathf.Abs(TimeHit2 - plane1.timeHit1);

@@ -14,6 +14,8 @@ public class HiHatSound : MonoBehaviour
 
     public AudioClip opensound, closesound;
 
+    public CheckStickHit hitCollision;
+
     public manager managerMIDI;
     public int[] closeHH = { 57, 120, 10 };
     public int[] openHH = { 46, 120, 10};
@@ -46,7 +48,7 @@ public class HiHatSound : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (plane1.timeHit1 != 0 && other.gameObject.tag == "SoundTag")
+        if (plane1.timeHit1 != 0 && other.gameObject.tag == "SoundTag" && hitCollision.isCollision == false)
         {
             TimeHit2 = Time.time;
 
