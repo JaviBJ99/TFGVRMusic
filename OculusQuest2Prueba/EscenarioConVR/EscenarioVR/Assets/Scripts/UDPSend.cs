@@ -24,10 +24,10 @@ public class UDPSend: MonoBehaviour
 
     UdpClient client;
 
-
+    bool pedalmode = MIDIOptions.PedalsMode;
     public int port = 25666; 
 
-
+    
 
     public bool newdata = false;
 
@@ -58,33 +58,39 @@ public class UDPSend: MonoBehaviour
 
     private void ReceiveData()
     {
-        while (true)
+
+        if (pedalmode)
         {
-            try
+
+            while (true)
             {
-                IPEndPoint anyIP = new IPEndPoint(IPAddress.Any, 0);
-                byte[] data = client.Receive(ref anyIP);
-
-                string text = Encoding.UTF8.GetString(data);
-
-                              
-                if (text == "k")
+                try
                 {
-                    kick.kickpedal();
+                    IPEndPoint anyIP = new IPEndPoint(IPAddress.Any, 0);
+                    byte[] data = client.Receive(ref anyIP);
+
+                    string text = Encoding.UTF8.GetString(data);
+
+
+                    if (text == "k")
+                    {
+                        kick.kickpedal();
+
+                    }
+                    if (text == "h")
+                    {
+                        hihat.hihatpedal();
+
+                    }
+
 
                 }
-                if (text == "h")
+                catch (Exception err)
                 {
-                    hihat.hihatpedal();
-
+                    Debug.Log(err.ToString());
                 }
-             
-     
             }
-            catch (Exception err)
-            {
-                Debug.Log(err.ToString());
-            }
+
         }
     }
 

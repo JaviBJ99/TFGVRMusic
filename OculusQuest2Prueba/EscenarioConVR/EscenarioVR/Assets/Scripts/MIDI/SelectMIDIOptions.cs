@@ -4,17 +4,13 @@ using UnityEngine;
 
 public class SelectMIDIOptions : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
-        MIDIOptions.MIDIChannel = 10;
+        MIDIOptions.MIDIChannel = 16;
         MIDIOptions.MIDIMode = true;
         MIDIOptions.PedalsMode = true;
 
     }
-
-
-    // Update is called once per frame
 
     public void ActivateMIDIMode(bool m)
     {
@@ -27,18 +23,14 @@ public class SelectMIDIOptions : MonoBehaviour
         switch (c)
         {
             case 0:
-                n = 10;
-                break;
-            case 1:
                 n = 16;
                 break;
-            case 2:
-                n = 20;
+            case 1:
+                n = 10;
                 break;
-
+           
         }
 
-        Debug.Log(n);
         MIDIOptions.MIDIChannel = n;
     }
 

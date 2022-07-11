@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/ClassicDrums.unity
+- path: Assets/Scenes/AdvancedDrums.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

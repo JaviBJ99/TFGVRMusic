@@ -17,12 +17,11 @@ public class HiHatSound : MonoBehaviour
     public CheckStickHit hitCollision;
 
     public manager managerMIDI;
-    public int[] closeHH = { 57, 120, 10 };
-    public int[] openHH = { 46, 120, 10};
+    public int[] closeHH = {57,120,16};
+    public int[] openHH = {46,120,16};
+    public int[] pedalHH = {44,120,16};
 
     public UDPSend sender = new UDPSend();
-
-    string signal;
 
     bool open = false;
 
@@ -35,13 +34,19 @@ public class HiHatSound : MonoBehaviour
 
     float volMIDI;
 
+    bool midimode;
 
     void Start()
     {
         watcher.secondaryButtonPress.AddListener(onSecondaryButtonEvent);
         AudioHihat = hihat.GetComponent<AudioSource>();
         move = top.GetComponent<Animation>();
+        midimode = MIDIOptions.MIDIMode;
 
+        if (midimode)
+        {
+            CheckMIDIChannel();
+        }
     }
 
 
@@ -73,15 +78,25 @@ public class HiHatSound : MonoBehaviour
 
                 if (open)
                 {
-                    openHH[1] = (int)volMIDI;
+                    
                     AudioHihat.PlayOneShot(opensound);
-                    managerMIDI.sendMIDI(openHH);
+
+                    if (midimode)
+                    {
+                        openHH[1] = (int)volMIDI;
+                        managerMIDI.sendMIDI(openHH);
+                    }
                 }
                 else
                 {
-                    closeHH[1] = (int)volMIDI;
+                    
                     AudioHihat.PlayOneShot(closesound);
-                    managerMIDI.sendMIDI(closeHH);
+
+                    if (midimode)
+                    {
+                        closeHH[1] = (int)volMIDI;
+                        managerMIDI.sendMIDI(closeHH);
+                    }
                 }
 
             }
@@ -125,18 +140,39 @@ public class HiHatSound : MonoBehaviour
             AudioHihat.Stop();
             move.Play("Close");
             AudioHihat.PlayOneShot(closesound);
+
+            if (midimode)
+            {
+                managerMIDI.sendMIDI(pedalHH);
+            }
         }
         else
         {
             move.Play("Open");
             AudioHihat.PlayOneShot(opensound);
+
+            if (midimode)
+            {
+                managerMIDI.sendMIDI(openHH);
+            }
+
         }
         open = !open; 
 
     }
 
 
+    void CheckMIDIChannel()
+    {
+        closeHH[2] = MIDIOptions.MIDIChannel;
+        openHH[2] = MIDIOptions.MIDIChannel;
+        pedalHH[2] = MIDIOptions.MIDIChannel;
 
-    
+
+    }
+
+
+
+
 }
 

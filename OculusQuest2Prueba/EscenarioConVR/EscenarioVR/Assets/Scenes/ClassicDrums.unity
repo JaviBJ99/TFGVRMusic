@@ -884,8 +884,6 @@ MonoBehaviour:
   kick: {fileID: 2136053711}
   hihat: {fileID: 1230942966}
   port: 25666
-  lastReceivedUDPPacket: 
-  allReceivedUDPPackets: 
   newdata: 0
 --- !u!4 &272594029
 Transform:
@@ -2938,8 +2936,6 @@ MonoBehaviour:
   sender: {fileID: 272594028}
   datafromnode: 
   midiOn: 34000000780000000a000000
-  midiOff: 340000000000000001000000
-  midibyte: 347801
 --- !u!4 &916243159
 Transform:
   m_ObjectHideFlags: 0
@@ -4007,6 +4003,7 @@ MonoBehaviour:
   managerMIDI: {fileID: 916243158}
   closeHH: 390000007800000001000000
   openHH: 3b0000007800000001000000
+  pedalHH: 2c0000007800000000000000
   sender: {fileID: 272594028}
   plane1: {fileID: 1617649572}
 --- !u!64 &1230942967
@@ -6370,6 +6367,10 @@ PrefabInstance:
       propertyPath: watcher
       value: 
       objectReference: {fileID: 352045532}
+    - target: {fileID: 4952399045719842447, guid: 5bccdd0c12ca32a438b22b73349fc6e0, type: 3}
+      propertyPath: managerMIDI
+      value: 
+      objectReference: {fileID: 916243158}
     - target: {fileID: 8277947521721674907, guid: 5bccdd0c12ca32a438b22b73349fc6e0, type: 3}
       propertyPath: m_RootOrder
       value: 4

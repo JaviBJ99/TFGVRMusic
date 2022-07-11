@@ -11,10 +11,15 @@ public class KickDrumSound : MonoBehaviour
     AudioSource AudioKick;
     public AudioClip ksound;
     private Animation m, p;
+    public manager managerMIDI;
 
-    public UDPSend sender = new UDPSend();
+    bool midimode;
+
+    //public UDPSend sender = new UDPSend();
 
     string signal;
+
+    public int[] kickmidisound = { 35, 120, 16 };
 
 
 
@@ -24,7 +29,12 @@ public class KickDrumSound : MonoBehaviour
         AudioKick = kick.GetComponent<AudioSource>();
         m = maza.GetComponent<Animation>(); 
         p = pedal.GetComponent<Animation>();
-
+        midimode = MIDIOptions.MIDIMode;
+        
+        if (midimode)
+        {
+            CheckMIDIChannel();
+        }
       
 
     }
@@ -39,6 +49,12 @@ public class KickDrumSound : MonoBehaviour
             AudioKick.PlayOneShot(ksound);
             m.Play();
             p.Play();
+
+            if (midimode)
+            {
+                managerMIDI.sendMIDI(kickmidisound);
+            }
+
         }
            
     }
@@ -49,9 +65,18 @@ public class KickDrumSound : MonoBehaviour
         m.Play();
         p.Play();
 
+        if (midimode)
+        {
+            managerMIDI.sendMIDI(kickmidisound);
+        }
+
+
     }
 
     
-
+    void CheckMIDIChannel()
+    {
+        kickmidisound[2] = MIDIOptions.MIDIChannel;
+    }
    
 }

@@ -31,7 +31,7 @@ public class InstrumentSound : MonoBehaviour
     public int bufferLength, numBuffers;
 
     int channel;
-    bool midiMode, pedalMode;
+    bool midiMode;
 
     float totalHits = 0;
     float totalv = 0;
@@ -47,10 +47,10 @@ public class InstrumentSound : MonoBehaviour
     {
 
         AudioInstrument = instrument.GetComponent<AudioSource>();
+
         insTag = instrument.gameObject.tag;
         channel = MIDIOptions.MIDIChannel;
         midiMode = MIDIOptions.MIDIMode;
-        pedalMode = MIDIOptions.PedalsMode;
 
         if (midiMode)
         {
@@ -89,7 +89,6 @@ public class InstrumentSound : MonoBehaviour
 
 
                 volMIDI = (db * 127.0f);
-                //Debug.Log("VOLUMEN MIDI" + (int)volMIDI);
                
       
                 AudioInstrument.volume = db;
@@ -121,12 +120,12 @@ public class InstrumentSound : MonoBehaviour
         int[] notaGOLIATH1 = {43,120,c};
         int[] notaGOLIATH2 = { 41, 120, c };
         int[] notaTOM1 = { 50, 120, c };
-        int[] notaTOM2 = { 48, 120, c };
+        int[] notaTOM2 = { 47, 120, c };
         int[] notaTOM3 = { 45, 120, c };
-        int[] notaRIDE = { 63, 120, c};
-        int[] notaCRASH1 = { 60, 120, c };
+        int[] notaRIDE = { 51, 120, c};
+        int[] notaCRASH1 = { 49, 120, c };
         int[] notaCRASH2 = { 57, 120, c };
-        int[] notaCRASH3 = { 51, 120, c };
+        int[] notaCRASH3 = { 57, 120, c };
 
 
         switch (tag)

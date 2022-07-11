@@ -13,12 +13,19 @@ public class manager : MonoBehaviour
 
     public int[] midiOn = { 52, 120, 10 };
 
+    bool midimode, pedalmode;
 
     void Start()
     {
 
-        //sender.init("192.168.1.67", Remoteport, 25666);
-        sender.init("192.168.4.1", Remoteport, 25666);
+        midimode = MIDIOptions.MIDIMode;
+        pedalmode = MIDIOptions.PedalsMode;
+       
+        if (midimode || pedalmode)
+        {
+            sender.init("192.168.4.1", Remoteport, 25666);
+        }
+        
 
     }
 

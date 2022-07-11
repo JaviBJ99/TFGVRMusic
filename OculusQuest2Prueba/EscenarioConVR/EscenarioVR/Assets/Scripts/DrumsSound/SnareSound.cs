@@ -19,12 +19,13 @@ public class SnareSound : MonoBehaviour
 
 
     public manager managerMIDI;
-    public int[] snareMIDI = { 38, 120, 16 };
-    public int[] rimshotMIDI = { 62, 120, 16 };
-    public int[] hoopMIDI = { 37, 120, 16 };
+    public int[] snareMIDI = { 38, 120,16};
+    public int[] rimshotMIDI = { 62, 120, 16};
+    public int[] hoopMIDI = { 40, 120, 16 };
 
     float volMIDI;
 
+    bool midimode;
 
     public CheckStickHit hitCollision;
 
@@ -34,7 +35,12 @@ public class SnareSound : MonoBehaviour
     {
 
         AudioSnare = snare.GetComponent<AudioSource>();
+        midimode = MIDIOptions.MIDIMode;
 
+        if (midimode)
+        {
+            CheckMIDIChannel();
+        }
     }
 
     public void OnTriggerEnter(Collider other)
@@ -60,10 +66,20 @@ public class SnareSound : MonoBehaviour
 
                     volMIDI = (db * 127.0f);
 
-                    rimshotMIDI[1] = (int)volMIDI;
-                    managerMIDI.sendMIDI(rimshotMIDI);
+               
 
                     AudioSnare.PlayOneShot(rimshot);
+
+
+
+                    if (midimode)
+                    {
+                        rimshotMIDI[1] = (int)volMIDI;
+                        managerMIDI.sendMIDI(rimshotMIDI);
+
+                    }
+
+
                     TimeHitHoop = 0.0f;
                     TimeHitPad = 0.0f;
                 }
@@ -87,11 +103,15 @@ public class SnareSound : MonoBehaviour
 
                     volMIDI = (db * 127.0f);
 
-                    snareMIDI[1] = (int)volMIDI;
-                    managerMIDI.sendMIDI(snareMIDI);
-
 
                     AudioSnare.PlayOneShot(stroke);
+
+                    if (midimode)
+                    {
+                        snareMIDI[1] = (int)volMIDI;
+                        managerMIDI.sendMIDI(snareMIDI);
+                    }
+
                     TimeHitHoop = 0.0f;
                     TimeHitPad = 0.0f;
 
@@ -118,10 +138,14 @@ public class SnareSound : MonoBehaviour
 
                     volMIDI = (db * 127.0f);
 
-                    hoopMIDI[1] = (int)volMIDI;
-                    managerMIDI.sendMIDI(hoopMIDI);
-
                     AudioSnare.PlayOneShot(hoop);
+
+                    if (midimode)
+                    {
+                        hoopMIDI[1] = (int)volMIDI;
+                        managerMIDI.sendMIDI(hoopMIDI);
+                    }
+
                     TimeHitHoop = 0.0f;
                     TimeHitPad = 0.0f;
                 }
@@ -135,6 +159,17 @@ public class SnareSound : MonoBehaviour
         }
 
     }
+
+
+    void CheckMIDIChannel()
+    {
+        snareMIDI[2] = MIDIOptions.MIDIChannel;
+        hoopMIDI[2] = MIDIOptions.MIDIChannel;
+        rimshotMIDI[2] = MIDIOptions.MIDIChannel;
+
+
+    }
+
 }
 
 /*

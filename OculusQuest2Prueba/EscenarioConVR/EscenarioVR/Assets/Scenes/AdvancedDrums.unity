@@ -509,6 +509,9 @@ MonoBehaviour:
   instrument: {fileID: 805132676}
   sound: {fileID: 8300000, guid: 708be811e8593504cb3a64ac9836fc1d, type: 3}
   plane1: {fileID: 2014168042}
+  managerMIDI: {fileID: 340961134}
+  hitCollision: {fileID: 805132685}
+  nota: 
   texto: {fileID: 0}
   bufferLength: 0
   numBuffers: 0
@@ -884,9 +887,10 @@ GameObject:
   - component: {fileID: 248268595}
   - component: {fileID: 248268601}
   - component: {fileID: 248268600}
+  - component: {fileID: 248268602}
   m_Layer: 0
   m_Name: tom3
-  m_TagString: Untagged
+  m_TagString: Tom1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1130,6 +1134,19 @@ AudioReverbFilter:
   m_LFReference: 250
   m_ReflectionsDelay: 0
   m_ReverbPreset: 27
+--- !u!114 &248268602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248268593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e12eb908e4b1d8409ebf2f6388ed348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollision: 0
 --- !u!1 &249518415
 GameObject:
   m_ObjectHideFlags: 0
@@ -1435,6 +1452,9 @@ MonoBehaviour:
   instrument: {fileID: 248268593}
   sound: {fileID: 8300000, guid: 424c9e7f09705d644a1a39275d2c6796, type: 3}
   plane1: {fileID: 497710118}
+  managerMIDI: {fileID: 340961134}
+  hitCollision: {fileID: 248268602}
+  nota: 
   texto: {fileID: 0}
   bufferLength: 0
   numBuffers: 0
@@ -1550,6 +1570,9 @@ MonoBehaviour:
   instrument: {fileID: 8296172669375926495}
   sound: {fileID: 8300000, guid: 708be811e8593504cb3a64ac9836fc1d, type: 3}
   plane1: {fileID: 1887525959}
+  managerMIDI: {fileID: 340961134}
+  hitCollision: {fileID: 8296172669375926500}
+  nota: 
   texto: {fileID: 0}
   bufferLength: 0
   numBuffers: 0
@@ -1616,6 +1639,53 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 303354057}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &340961133
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 340961135}
+  - component: {fileID: 340961134}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &340961134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340961133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3533f21c70dfd2940b0fec1e4b47cde0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Remoteport: 25666
+  sender: {fileID: 405539870}
+  datafromnode: 
+  midiOn: 34000000780000000a000000
+--- !u!4 &340961135
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340961133}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.264932, y: -12.42894, z: 37.301773}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &352045527
 GameObject:
   m_ObjectHideFlags: 0
@@ -2182,6 +2252,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ac3daf73edb9bc40a74e73c64457b16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &405539869
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 405539871}
+  - component: {fileID: 405539870}
+  m_Layer: 0
+  m_Name: UDP
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &405539870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405539869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c132392a3d6b72546810c63820aa0c16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kick: {fileID: 6532621683557913831}
+  hihat: {fileID: 6913553760160750673}
+  port: 25666
+  newdata: 0
+--- !u!4 &405539871
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405539869}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.264932, y: -12.42894, z: 37.301773}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &497710116
 GameObject:
   m_ObjectHideFlags: 0
@@ -2434,9 +2551,10 @@ GameObject:
   - component: {fileID: 519329497}
   - component: {fileID: 519329503}
   - component: {fileID: 519329502}
+  - component: {fileID: 519329504}
   m_Layer: 0
   m_Name: crash3
-  m_TagString: Untagged
+  m_TagString: Crash3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2674,6 +2792,19 @@ AudioReverbFilter:
   m_LFReference: 250
   m_ReflectionsDelay: 0
   m_ReverbPreset: 27
+--- !u!114 &519329504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519329495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e12eb908e4b1d8409ebf2f6388ed348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollision: 0
 --- !u!1 &530205837
 GameObject:
   m_ObjectHideFlags: 0
@@ -2690,9 +2821,10 @@ GameObject:
   - component: {fileID: 530205839}
   - component: {fileID: 530205845}
   - component: {fileID: 530205844}
+  - component: {fileID: 530205846}
   m_Layer: 0
   m_Name: crash2
-  m_TagString: Untagged
+  m_TagString: Crash3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2930,6 +3062,19 @@ AudioReverbFilter:
   m_LFReference: 250
   m_ReflectionsDelay: 0
   m_ReverbPreset: 27
+--- !u!114 &530205846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530205837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e12eb908e4b1d8409ebf2f6388ed348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollision: 0
 --- !u!1 &573008651
 GameObject:
   m_ObjectHideFlags: 0
@@ -2979,6 +3124,9 @@ MonoBehaviour:
   instrument: {fileID: 1036652759}
   sound: {fileID: 8300000, guid: 424c9e7f09705d644a1a39275d2c6796, type: 3}
   plane1: {fileID: 167010446}
+  managerMIDI: {fileID: 340961134}
+  hitCollision: {fileID: 1036652768}
+  nota: 
   texto: {fileID: 0}
   bufferLength: 0
   numBuffers: 0
@@ -3153,6 +3301,9 @@ MonoBehaviour:
   instrument: {fileID: 519329495}
   sound: {fileID: 8300000, guid: 6f14f1181ee6e804687eb8060ba9b563, type: 3}
   plane1: {fileID: 1556888484}
+  managerMIDI: {fileID: 340961134}
+  hitCollision: {fileID: 519329504}
+  nota: 
   texto: {fileID: 0}
   bufferLength: 0
   numBuffers: 0
@@ -3835,9 +3986,10 @@ GameObject:
   - component: {fileID: 805132678}
   - component: {fileID: 805132684}
   - component: {fileID: 805132683}
+  - component: {fileID: 805132685}
   m_Layer: 0
   m_Name: goliath2
-  m_TagString: Untagged
+  m_TagString: Goliath2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4081,6 +4233,19 @@ AudioReverbFilter:
   m_LFReference: 250
   m_ReflectionsDelay: 0
   m_ReverbPreset: 27
+--- !u!114 &805132685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805132676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e12eb908e4b1d8409ebf2f6388ed348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollision: 0
 --- !u!1 &871309889
 GameObject:
   m_ObjectHideFlags: 0
@@ -4200,11 +4365,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   watcher: {fileID: 0}
-  IsPressed: 0
   hihat: {fileID: 0}
   top: {fileID: 0}
   opensound: {fileID: 0}
   closesound: {fileID: 0}
+  hitCollision: {fileID: 0}
+  managerMIDI: {fileID: 0}
+  closeHH: 390000007800000010000000
+  openHH: 2e0000007800000010000000
+  pedalHH: 2c0000007800000010000000
+  sender: {fileID: 0}
   plane1: {fileID: 0}
 --- !u!1 &973082412
 GameObject:
@@ -4373,6 +4543,11 @@ MonoBehaviour:
   hoop: {fileID: 8300000, guid: 13353c88d388354409a430e4b85001e5, type: 3}
   rimshot: {fileID: 8300000, guid: 76224acb2d865f145ad1aee19ae5bcfa, type: 3}
   plane1: {fileID: 0}
+  managerMIDI: {fileID: 0}
+  snareMIDI: 260000007800000010000000
+  rimshotMIDI: 3e0000007800000010000000
+  hoopMIDI: 280000007800000010000000
+  hitCollision: {fileID: 0}
 --- !u!4 &1016089467 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5542792111326498637, guid: fbd60145660a06449a97a3b8ecd37e4c, type: 3}
@@ -4431,6 +4606,11 @@ MonoBehaviour:
   hoop: {fileID: 8300000, guid: 13353c88d388354409a430e4b85001e5, type: 3}
   rimshot: {fileID: 8300000, guid: 76224acb2d865f145ad1aee19ae5bcfa, type: 3}
   plane1: {fileID: 973082414}
+  managerMIDI: {fileID: 340961134}
+  snareMIDI: 260000007800000010000000
+  rimshotMIDI: 3e0000007800000010000000
+  hoopMIDI: 280000007800000010000000
+  hitCollision: {fileID: 8296172668655870090}
 --- !u!64 &1034281192
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4578,9 +4758,10 @@ GameObject:
   - component: {fileID: 1036652761}
   - component: {fileID: 1036652767}
   - component: {fileID: 1036652766}
+  - component: {fileID: 1036652768}
   m_Layer: 0
   m_Name: tom2
-  m_TagString: Untagged
+  m_TagString: Tom2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4824,6 +5005,19 @@ AudioReverbFilter:
   m_LFReference: 250
   m_ReflectionsDelay: 0
   m_ReverbPreset: 27
+--- !u!114 &1036652768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036652759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e12eb908e4b1d8409ebf2f6388ed348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollision: 0
 --- !u!850595691 &1122260946
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -5368,6 +5562,9 @@ MonoBehaviour:
   instrument: {fileID: 530205837}
   sound: {fileID: 8300000, guid: 6f14f1181ee6e804687eb8060ba9b563, type: 3}
   plane1: {fileID: 1122854145}
+  managerMIDI: {fileID: 340961134}
+  hitCollision: {fileID: 530205846}
+  nota: 
   texto: {fileID: 0}
   bufferLength: 0
   numBuffers: 0
@@ -5483,6 +5680,9 @@ MonoBehaviour:
   instrument: {fileID: 8296172667665953721}
   sound: {fileID: 8300000, guid: 6f14f1181ee6e804687eb8060ba9b563, type: 3}
   plane1: {fileID: 1646114056}
+  managerMIDI: {fileID: 340961134}
+  hitCollision: {fileID: 8296172667665953726}
+  nota: 
   texto: {fileID: 0}
   bufferLength: 0
   numBuffers: 0
@@ -5596,11 +5796,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   watcher: {fileID: 352045533}
-  IsPressed: 0
   hihat: {fileID: 249518415}
   top: {fileID: 0}
   opensound: {fileID: 8300000, guid: e71e7dd54cb3f504fb5c1e97f320f113, type: 3}
   closesound: {fileID: 8300000, guid: c3966f0e3804fdd46b2cd2d9bbef22e2, type: 3}
+  hitCollision: {fileID: 0}
+  managerMIDI: {fileID: 0}
+  closeHH: 390000007800000010000000
+  openHH: 2e0000007800000010000000
+  pedalHH: 2c0000007800000010000000
+  sender: {fileID: 0}
   plane1: {fileID: 1617649572}
 --- !u!64 &1230942967
 MeshCollider:
@@ -5680,7 +5885,7 @@ GameObject:
   - component: {fileID: 1255914771}
   m_Layer: 0
   m_Name: RideCollider
-  m_TagString: Untagged
+  m_TagString: Ride
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5714,6 +5919,9 @@ MonoBehaviour:
   instrument: {fileID: 8296172668277175880}
   sound: {fileID: 8300000, guid: 6a751c1d0f11d334288ac85bdc9abde9, type: 3}
   plane1: {fileID: 731644188}
+  managerMIDI: {fileID: 340961134}
+  hitCollision: {fileID: 8296172668277175885}
+  nota: 
   texto: {fileID: 0}
   bufferLength: 0
   numBuffers: 0
@@ -5826,6 +6034,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ride: {fileID: 8296172668277175880}
   bsound: {fileID: 8300000, guid: 4a0893d90723faa458116006fe39222f, type: 3}
+  managerMIDI: {fileID: 340961134}
+  nota: 350000007800000010000000
 --- !u!135 &1320147305
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5888,6 +6098,9 @@ MonoBehaviour:
   instrument: {fileID: 8296172668637203487}
   sound: {fileID: 8300000, guid: 424c9e7f09705d644a1a39275d2c6796, type: 3}
   plane1: {fileID: 58778617}
+  managerMIDI: {fileID: 340961134}
+  hitCollision: {fileID: 8296172668637203492}
+  nota: 
   texto: {fileID: 0}
   bufferLength: 0
   numBuffers: 0
@@ -15739,6 +15952,8 @@ MonoBehaviour:
   pedal: {fileID: 2686410410253094525}
   maza: {fileID: 2686410408770898668}
   ksound: {fileID: 8300000, guid: 388bf8419b719224a8f0b13c5fdcbbfe, type: 3}
+  managerMIDI: {fileID: 340961134}
+  kickmidisound: 230000007800000010000000
 --- !u!1 &6532621684067465142
 GameObject:
   m_ObjectHideFlags: 0
@@ -16050,6 +16265,7 @@ GameObject:
   - component: {fileID: 6913553759162562545}
   - component: {fileID: 6913553759162562558}
   - component: {fileID: 6913553759162562559}
+  - component: {fileID: 6913553759162562537}
   m_Layer: 0
   m_Name: hihattop
   m_TagString: Untagged
@@ -16057,6 +16273,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6913553759162562537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6913553759162562536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e12eb908e4b1d8409ebf2f6388ed348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollision: 0
 --- !u!164 &6913553759162562544
 AudioReverbFilter:
   m_ObjectHideFlags: 0
@@ -16455,11 +16684,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   watcher: {fileID: 352045533}
-  IsPressed: 0
   hihat: {fileID: 6913553759162562536}
   top: {fileID: 6913553759162562536}
   opensound: {fileID: 8300000, guid: e71e7dd54cb3f504fb5c1e97f320f113, type: 3}
   closesound: {fileID: 8300000, guid: c3966f0e3804fdd46b2cd2d9bbef22e2, type: 3}
+  hitCollision: {fileID: 6913553759162562537}
+  managerMIDI: {fileID: 340961134}
+  closeHH: 390000007800000010000000
+  openHH: 2e0000007800000010000000
+  pedalHH: 2c0000007800000010000000
+  sender: {fileID: 0}
   plane1: {fileID: 6913553759470055683}
 --- !u!4 &6913553760160750674
 Transform:
@@ -18454,6 +18688,8 @@ MonoBehaviour:
   pedal: {fileID: 0}
   maza: {fileID: 0}
   ksound: {fileID: 8300000, guid: 388bf8419b719224a8f0b13c5fdcbbfe, type: 3}
+  managerMIDI: {fileID: 0}
+  kickmidisound: 230000007800000010000000
 --- !u!114 &8296172667524862062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18506,9 +18742,10 @@ GameObject:
   - component: {fileID: 8296172667665953723}
   - component: {fileID: 8296172667665953725}
   - component: {fileID: 8296172667665953724}
+  - component: {fileID: 8296172667665953726}
   m_Layer: 0
   m_Name: crash
-  m_TagString: Untagged
+  m_TagString: Crash1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18665,6 +18902,19 @@ AudioReverbFilter:
   m_LFReference: 250
   m_ReflectionsDelay: 0
   m_ReverbPreset: 27
+--- !u!114 &8296172667665953726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172667665953721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e12eb908e4b1d8409ebf2f6388ed348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollision: 0
 --- !u!1 &8296172668013872431
 GameObject:
   m_ObjectHideFlags: 0
@@ -18754,6 +19004,7 @@ GameObject:
   - component: {fileID: 8296172668277175882}
   - component: {fileID: 8296172668277175884}
   - component: {fileID: 8296172668277175883}
+  - component: {fileID: 8296172668277175885}
   m_Layer: 0
   m_Name: ride
   m_TagString: Untagged
@@ -18913,6 +19164,19 @@ AudioReverbFilter:
   m_LFReference: 250
   m_ReflectionsDelay: 0
   m_ReverbPreset: 27
+--- !u!114 &8296172668277175885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172668277175880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e12eb908e4b1d8409ebf2f6388ed348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollision: 0
 --- !u!1 &8296172668637203487
 GameObject:
   m_ObjectHideFlags: 0
@@ -18929,9 +19193,10 @@ GameObject:
   - component: {fileID: 8296172668637203489}
   - component: {fileID: 8296172668637203491}
   - component: {fileID: 8296172668637203490}
+  - component: {fileID: 8296172668637203492}
   m_Layer: 0
   m_Name: tom
-  m_TagString: Untagged
+  m_TagString: Tom3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19088,6 +19353,19 @@ AudioReverbFilter:
   m_LFReference: 250
   m_ReflectionsDelay: 0
   m_ReverbPreset: 27
+--- !u!114 &8296172668637203492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172668637203487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e12eb908e4b1d8409ebf2f6388ed348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollision: 0
 --- !u!1 &8296172668655870085
 GameObject:
   m_ObjectHideFlags: 0
@@ -19104,6 +19382,7 @@ GameObject:
   - component: {fileID: 8296172668655870087}
   - component: {fileID: 8296172668655870089}
   - component: {fileID: 8296172668655870088}
+  - component: {fileID: 8296172668655870090}
   m_Layer: 0
   m_Name: snare
   m_TagString: Untagged
@@ -19263,6 +19542,19 @@ AudioReverbFilter:
   m_LFReference: 250
   m_ReflectionsDelay: 0
   m_ReverbPreset: 27
+--- !u!114 &8296172668655870090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172668655870085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e12eb908e4b1d8409ebf2f6388ed348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollision: 0
 --- !u!1 &8296172668746421447
 GameObject:
   m_ObjectHideFlags: 0
@@ -19333,9 +19625,10 @@ GameObject:
   - component: {fileID: 8296172669375926496}
   - component: {fileID: 8296172669375926499}
   - component: {fileID: 8296172669375926498}
+  - component: {fileID: 8296172669375926500}
   m_Layer: 0
   m_Name: goliath
-  m_TagString: Untagged
+  m_TagString: Goliath1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19492,6 +19785,19 @@ AudioReverbFilter:
   m_LFReference: 250
   m_ReflectionsDelay: 0
   m_ReverbPreset: 27
+--- !u!114 &8296172669375926500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669375926495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e12eb908e4b1d8409ebf2f6388ed348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollision: 0
 --- !u!1 &8319304467933180638
 GameObject:
   m_ObjectHideFlags: 0

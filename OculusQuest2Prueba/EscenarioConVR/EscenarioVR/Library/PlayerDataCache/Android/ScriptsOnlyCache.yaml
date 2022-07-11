@@ -2084,7 +2084,7 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 14abd6f59cc4ffca235c4a71638c0c0a
+      Hash: 38279df511ab8fab8263a2370359dbfa
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: KickDrumSound
@@ -2162,7 +2162,7 @@ ScriptsOnlyBuild:
     className: ChangeReverb
   - hash:
       serializedVersion: 2
-      Hash: eae5ea89db758f0d550cb6503088f359
+      Hash: e4363acb0404d75f6b42fe4a81bc183f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: manager
@@ -2276,7 +2276,7 @@ ScriptsOnlyBuild:
     className: PrimaryButtonWatcher
   - hash:
       serializedVersion: 2
-      Hash: 30cf74a918dc82b01dcac2f2dda1fcf8
+      Hash: b01a243ce9c100c132ff00492e421fbb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HiHatSound

@@ -11,14 +11,18 @@ public class RideBellSound : MonoBehaviour
     AudioSource AudioBell;
     public AudioClip bsound;
     public manager managerMIDI;
-    public int[] nota = {62,120,16};
-
+    public int[] nota = {53,120,16};
+    bool midimode;
 
     void Start()
     {
-       
+        midimode = MIDIOptions.MIDIMode;
         AudioBell = ride.GetComponent<AudioSource>();
 
+        if (midimode)
+        {
+            CheckMIDIChannel();
+        }
     }
 
 
@@ -28,9 +32,22 @@ public class RideBellSound : MonoBehaviour
         if (other.gameObject.tag == "SoundTag")
         {
             AudioBell.PlayOneShot(bsound);
-            managerMIDI.sendMIDI(nota);
+            
+            if (midimode)
+            {
+                managerMIDI.sendMIDI(nota);
+            }
+            
+
+
         }
 
     }
-   
+
+    void CheckMIDIChannel()
+    {
+        nota[2] = MIDIOptions.MIDIChannel;
+    }
+
+
 }
