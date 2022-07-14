@@ -19,9 +19,9 @@ public class KickDrumSound : MonoBehaviour
 
     string signal;
 
-    public int[] kickmidisound = { 35, 120, 16 };
+    int[] kickmidisound = { 35, 120, 16 };
 
-
+    //int[] kickmidisound = { 44, 120, 16 };
 
     void Start()
     {

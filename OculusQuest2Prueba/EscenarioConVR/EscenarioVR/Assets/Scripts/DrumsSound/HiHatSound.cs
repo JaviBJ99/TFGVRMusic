@@ -17,9 +17,16 @@ public class HiHatSound : MonoBehaviour
     public CheckStickHit hitCollision;
 
     public manager managerMIDI;
-    public int[] closeHH = {57,120,16};
-    public int[] openHH = {46,120,16};
-    public int[] pedalHH = {44,120,16};
+    
+    int[] closeHH = {57,120,16};
+    int[] openHH = {46,120,16};
+    int[] pedalHH = {44,120,16};
+    
+    /*
+    int[] closeHH = { 57, 120, 16 };
+    int[] openHH = { 59, 120, 16 };
+    int[] pedalHH = { 57, 120, 16 };
+    */
 
     public UDPSend sender = new UDPSend();
 

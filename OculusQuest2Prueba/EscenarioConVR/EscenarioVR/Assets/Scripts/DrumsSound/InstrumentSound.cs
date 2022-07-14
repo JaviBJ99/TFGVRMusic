@@ -116,6 +116,7 @@ public class InstrumentSound : MonoBehaviour
 
     private int[] selectNote(string tag, int c)
     {
+       
         int[] notaMIDI = {};
         int[] notaGOLIATH1 = {43,120,c};
         int[] notaGOLIATH2 = { 41, 120, c };
@@ -126,7 +127,19 @@ public class InstrumentSound : MonoBehaviour
         int[] notaCRASH1 = { 49, 120, c };
         int[] notaCRASH2 = { 57, 120, c };
         int[] notaCRASH3 = { 57, 120, c };
-
+       
+       /*
+        int[] notaMIDI = { };
+        int[] notaGOLIATH1 = { 43, 120, c };
+        int[] notaGOLIATH2 = { 48, 120, c };
+        int[] notaTOM1 = { 53, 120, c };
+        int[] notaTOM2 = { 50, 120, c };
+        int[] notaTOM3 = { 42, 120, c };
+        int[] notaRIDE = { 63, 120, c };
+        int[] notaCRASH1 = { 60, 120, c };
+        int[] notaCRASH2 = { 61, 120, c };
+        int[] notaCRASH3 = { 57, 120, c };
+       */
 
         switch (tag)
         {

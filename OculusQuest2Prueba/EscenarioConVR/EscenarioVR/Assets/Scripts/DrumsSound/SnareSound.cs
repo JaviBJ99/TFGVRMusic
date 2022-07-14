@@ -19,9 +19,16 @@ public class SnareSound : MonoBehaviour
 
 
     public manager managerMIDI;
-    public int[] snareMIDI = { 38, 120,16};
-    public int[] rimshotMIDI = { 62, 120, 16};
-    public int[] hoopMIDI = { 40, 120, 16 };
+
+    
+    int[] snareMIDI = { 38, 120,16};
+    int[] rimshotMIDI = { 62, 120, 16};
+    int[] hoopMIDI = { 40, 120, 16 };
+ /*
+    int[] snareMIDI = { 49, 120, 16 };
+    int[] rimshotMIDI = { 51, 120, 16 };
+    int[] hoopMIDI = { 73, 120, 16 };
+ */
 
     float volMIDI;
 

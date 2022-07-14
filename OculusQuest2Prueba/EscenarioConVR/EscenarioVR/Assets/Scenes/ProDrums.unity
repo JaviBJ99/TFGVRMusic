@@ -1277,7 +1277,7 @@ MonoBehaviour:
   sound: {fileID: 8300000, guid: 708be811e8593504cb3a64ac9836fc1d, type: 3}
   plane1: {fileID: 1887525959}
   managerMIDI: {fileID: 1216062745}
-  hitCollision: {fileID: 0}
+  hitCollision: {fileID: 8296172669375926500}
   nota: 
   texto: {fileID: 0}
   bufferLength: 0
@@ -3941,9 +3941,6 @@ MonoBehaviour:
   rimshot: {fileID: 8300000, guid: 76224acb2d865f145ad1aee19ae5bcfa, type: 3}
   plane1: {fileID: 0}
   managerMIDI: {fileID: 0}
-  snareMIDI: 260000007800000010000000
-  rimshotMIDI: 3e0000007800000010000000
-  hoopMIDI: 250000007800000010000000
   hitCollision: {fileID: 0}
 --- !u!4 &1016089467 stripped
 Transform:
@@ -4004,10 +4001,7 @@ MonoBehaviour:
   rimshot: {fileID: 8300000, guid: 76224acb2d865f145ad1aee19ae5bcfa, type: 3}
   plane1: {fileID: 973082414}
   managerMIDI: {fileID: 1216062745}
-  snareMIDI: 260000007800000010000000
-  rimshotMIDI: 3e0000007800000010000000
-  hoopMIDI: 250000007800000010000000
-  hitCollision: {fileID: 0}
+  hitCollision: {fileID: 8296172668655870090}
 --- !u!64 &1034281192
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5050,9 +5044,6 @@ MonoBehaviour:
   closesound: {fileID: 8300000, guid: c3966f0e3804fdd46b2cd2d9bbef22e2, type: 3}
   hitCollision: {fileID: 0}
   managerMIDI: {fileID: 0}
-  closeHH: 2a000000780000000a000000
-  openHH: 2e000000780000000a000000
-  pedalHH: 2c0000007800000010000000
   sender: {fileID: 0}
   plane1: {fileID: 1617649572}
 --- !u!64 &1230942967
@@ -5427,7 +5418,6 @@ MonoBehaviour:
   ride: {fileID: 8296172668277175880}
   bsound: {fileID: 8300000, guid: 4a0893d90723faa458116006fe39222f, type: 3}
   managerMIDI: {fileID: 1216062745}
-  nota: 3e0000007800000010000000
 --- !u!135 &1320147305
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9112,10 +9102,7 @@ MonoBehaviour:
   closesound: {fileID: 8300000, guid: c3966f0e3804fdd46b2cd2d9bbef22e2, type: 3}
   hitCollision: {fileID: 1834005714610662779}
   managerMIDI: {fileID: 1216062745}
-  closeHH: 2a000000780000000a000000
-  openHH: 2e000000780000000a000000
-  pedalHH: 2c0000007800000010000000
-  sender: {fileID: 0}
+  sender: {fileID: 2143165106}
   plane1: {fileID: 1834005712772246417}
 --- !u!33 &1834005713427777228
 MeshFilter:
@@ -10724,7 +10711,6 @@ MonoBehaviour:
   maza: {fileID: 3880061585554279842}
   ksound: {fileID: 8300000, guid: 388bf8419b719224a8f0b13c5fdcbbfe, type: 3}
   managerMIDI: {fileID: 1216062745}
-  kickmidisound: 230000007800000010000000
 --- !u!164 &5348090200210953130
 AudioReverbFilter:
   m_ObjectHideFlags: 0
@@ -11883,7 +11869,6 @@ MonoBehaviour:
   maza: {fileID: 0}
   ksound: {fileID: 8300000, guid: 388bf8419b719224a8f0b13c5fdcbbfe, type: 3}
   managerMIDI: {fileID: 0}
-  kickmidisound: 230000007800000010000000
 --- !u!164 &8296172667524862062
 AudioReverbFilter:
   m_ObjectHideFlags: 0
@@ -12575,6 +12560,7 @@ GameObject:
   - component: {fileID: 8296172668655870087}
   - component: {fileID: 8296172668655870089}
   - component: {fileID: 8296172668655870088}
+  - component: {fileID: 8296172668655870090}
   m_Layer: 0
   m_Name: snare
   m_TagString: Untagged
@@ -12734,6 +12720,19 @@ AudioReverbFilter:
   m_LFReference: 250
   m_ReflectionsDelay: 0
   m_ReverbPreset: 27
+--- !u!114 &8296172668655870090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172668655870085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e12eb908e4b1d8409ebf2f6388ed348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollision: 0
 --- !u!1 &8296172668746421447
 GameObject:
   m_ObjectHideFlags: 0
@@ -12804,6 +12803,7 @@ GameObject:
   - component: {fileID: 8296172669375926496}
   - component: {fileID: 8296172669375926499}
   - component: {fileID: 8296172669375926498}
+  - component: {fileID: 8296172669375926500}
   m_Layer: 0
   m_Name: goliath
   m_TagString: Goliath1
@@ -12963,6 +12963,19 @@ AudioReverbFilter:
   m_LFReference: 250
   m_ReflectionsDelay: 0
   m_ReverbPreset: 27
+--- !u!114 &8296172669375926500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669375926495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e12eb908e4b1d8409ebf2f6388ed348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollision: 0
 --- !u!1001 &8539739240168270736
 PrefabInstance:
   m_ObjectHideFlags: 0
